@@ -12,7 +12,7 @@ MIN_RISE_PCT = 0.15      # 波段最小漲幅 15%
 MIN_DURATION = 5         # 最少持續 5 小時 (5 根 K 棒)
 LOOKBACK_PERIOD = 15     # 找尋局部高低點的視窗大小 (15 小時)
 KLINE_LIMIT = 1500       # 抓取過去 1500 小時 (約 62.5 天) 的數據
-MAX_SYMBOLS = 150        # 取交易量前 150 名的標的 (避免流動性枯竭妖幣)
+MAX_SYMBOLS = None        # 取交易量前 150 名的標的 (避免流動性枯竭妖幣)
 
 def get_binance_usdt_futures():
     """透過 CCXT 獲取並過濾幣安 U本位 永續合約代幣名單 (按交易量排序)"""
