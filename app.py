@@ -120,7 +120,7 @@ def main():
             height=420, margin=dict(l=5, r=50, t=50, b=20), xaxis_rangeslider_visible=False,
             template="plotly_white", paper_bgcolor='white', plot_bgcolor='white',
             title=dict(
-                text=f"<b>{symbol} ({selected_tf}) |  {res['rise_pct']:.1%}</b>", 
+                text=f"<b>{symbol} ({selected_tf})</b>", 
                 font=dict(size=22, color='#000000'), # 強制圖表標題為純黑
                 x=0.01
             ),
