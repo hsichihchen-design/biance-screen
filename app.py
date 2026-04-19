@@ -26,8 +26,12 @@ def main():
     all_results = data_store.get('results', [])
     
     col_t1, col_t2 = st.columns([3, 1])
-    with col_t1: st.title("₿ Binance 180K 階梯式結構看板")
-    with col_time := col_t2: st.markdown(f"<div style='text-align:right; color:#555; padding-top:25px;'><b>最後掃描</b><br>{last_updated}</div>", unsafe_allow_html=True)
+    
+    with col_t1: 
+        st.title("₿ Binance 180K 階梯式結構看板")
+        
+    with col_t2: 
+        st.markdown(f"<div style='text-align:right; color:#555; padding-top:25px;'><b>最後掃描</b><br>{last_updated}</div>", unsafe_allow_html=True)
 
     available_tfs = sorted(list(set([r['timeframe'] for r in all_results])))
     if not available_tfs:
