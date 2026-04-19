@@ -11,9 +11,9 @@ from datetime import datetime, timedelta
 # ==========================================
 TF_CONFIG = {
     '3m':  {'rise': 0.03, 'interval': '3m',  'gap': 0.03}, 
-    '15m': {'rise': 0.10, 'interval': '15m', 'gap': 0.10}, 
-    '1h':  {'rise': 0.15, 'interval': '1h',  'gap': 0.15},  
-    '4h':  {'rise': 0.25, 'interval': '4h',  'gap': 0.20}   # 改 8h -> 4h, 漲幅 25%
+    '15m': {'rise': 0.07, 'interval': '15m', 'gap': 0.10}, 
+    '1h':  {'rise': 0.1, 'interval': '1h',  'gap': 0.15},  
+    '4h':  {'rise': 0.15, 'interval': '4h',  'gap': 0.20}   # 改 8h -> 4h, 漲幅 25%
 }
 
 # ==========================================
@@ -22,7 +22,7 @@ TF_CONFIG = {
 ANALYSIS_BARS = 180      # 統一分析最後 180 根 K 棒
 LOOKBACK_PERIOD = 10     
 MIN_DURATION = 3         
-COOLING_BARS = 10        
+COOLING_BARS = 30        
 
 session = requests.Session()
 
