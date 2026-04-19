@@ -46,11 +46,13 @@ def main():
     all_results = data_store.get('results', [])
     
     # 標題欄位
-    col_t1, col_t2 = st.columns([3, 1])
-    with col_t1: 
-        st.markdown("<h1 style='color: #000000; font-size: 2.2rem; font-weight: 900;'>₿ 幣安掃圖</h1>", unsafe_allow_html=True)
-    with col_t2: 
-        st.markdown(f"<div style='text-align:right; color:#000000; padding-top:20px; font-weight:800;'>最後更新<br>{last_updated}</div>", unsafe_allow_html=True)
+    # 標題與更新時間合併為單一欄位
+    st.markdown(f"""
+        <div style='display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #000000; padding-bottom: 5px; margin-bottom: 10px;'>
+            <div style='font-size: 2.2rem; font-weight: 900; color: #000000;'>₿ 幣安掃圖</div>
+            <div style='font-size: 0.9rem; font-weight: 800; color: #000000;'>更新：{last_updated}</div>
+        </div>
+        """, unsafe_allow_html=True)
 
     # 取得可用週期
     available_tfs = sorted(list(set([r['timeframe'] for r in all_results])))
