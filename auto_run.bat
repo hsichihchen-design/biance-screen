@@ -16,4 +16,5 @@ git commit -m "Scheduled Update: %date% %time%" || echo "No changes"
 git push origin main
 
 :: 移除 pause，讓視窗跑完自動關閉
+pause
 exit
