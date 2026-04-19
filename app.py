@@ -7,10 +7,7 @@ import json
 from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor
 
-# ==========================================
-# 頁面配置與樣式優化
-# ==========================================
-st.set_page_config(page_title="Binance 1H 型態瀏覽器", layout="wide")
+st.set_page_config(page_title="Binance 多週期型態瀏覽器", layout="wide")
 
 st.markdown("""
     <style>
@@ -21,12 +18,8 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# ==========================================
-# 數據獲取模組 (Binance API)
-# ==========================================
-def fetch_binance_1h_data(symbol, limit=150):
-    """從幣安 API 獲取 1H K線"""
-    url = f"https://fapi.binance.com/fapi/v1/klines?symbol={symbol}&interval=1h&limit={limit}"
+def fetch_binance_data(symbol, interval, limit=150):
+    url = f"https://fapi.binance.com/fapi/v1/klines?symbol={symbol}&interval={interval}&limit={limit}"
     try:
         res = requests.get(url, timeout=5).json()
         df = pd.DataFrame(res, columns=[
@@ -37,7 +30,6 @@ def fetch_binance_1h_data(symbol, limit=150):
         for col in ['Open', 'High', 'Low', 'Close', 'Volume']:
             df[col] = df[col].astype(float)
         
-        # 計算均線 (與 update_data.py 對齊)
         df['MA10'] = df['Close'].rolling(window=10).mean()
         df['MA20'] = df['Close'].rolling(window=20).mean()
         df['MA60'] = df['Close'].rolling(window=60).mean()
@@ -45,23 +37,19 @@ def fetch_binance_1h_data(symbol, limit=150):
     except Exception:
         return symbol, pd.DataFrame()
 
-@st.cache_data(ttl=300) # 幣圈變化快，緩存設為 5 分鐘
-def load_all_charts_data(symbols):
-    """並行下載所有幣種數據"""
+@st.cache_data(ttl=120) 
+def load_all_charts_data(symbol_tf_pairs):
     results = {}
     with ThreadPoolExecutor(max_workers=10) as executor:
-        future_to_symbol = {executor.submit(fetch_binance_1h_data, s): s for s in symbols}
-        for future in future_to_symbol:
+        future_to_pair = {executor.submit(fetch_binance_data, s, tf): (s, tf) for s, tf in symbol_tf_pairs}
+        for future in future_to_pair:
             sym, df = future.result()
+            tf = future_to_pair[future][1]
             if not df.empty:
-                results[sym] = df
+                results[f"{sym}_{tf}"] = df
     return results
 
-# ==========================================
-# 程式主邏輯
-# ==========================================
 def main():
-    # 1. 讀取分析結果
     try:
         with open('uptrend_results.json', 'r', encoding='utf-8') as f:
             data_store = json.load(f)
@@ -69,71 +57,81 @@ def main():
         st.error("⚠️ 找不到 uptrend_results.json，請先執行掃描腳本。")
         return
 
-    # 2. 標題與更新時間
     last_updated = data_store.get('last_updated', '未知')
+    all_results = data_store.get('results', [])
+    
+    # 提取 JSON 中有的時間週期並排序
+    available_tfs = list(set([r.get('timeframe', '1h') for r in all_results]))
+    tf_order = {'3m': 1, '15m': 2, '1h': 3, '8h': 4}
+    available_tfs.sort(key=lambda x: tf_order.get(x, 99))
+
     col_t1, col_t2 = st.columns([3, 1])
     with col_t1:
-        st.title("₿ Binance Futures 1H 強勢股")
+        st.title("₿ Binance 多週期合約強勢股")
     with col_t2:
-        st.markdown(f"<div style='text-align:right; color:#666;'>最後更新: {last_updated}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='text-align:right; color:#666;'>最後掃描時間: {last_updated}</div>", unsafe_allow_html=True)
 
-    # 3. 準備清單
-    all_results = data_store.get('results', [])
-    symbol_list = sorted(list(set([r['symbol'] for r in all_results])))
-
-    if not symbol_list:
-        st.info("目前沒有符合篩選條件的幣種。")
+    if not available_tfs:
+        st.info("目前全市場沒有符合您嚴格條件的幣種，請等待下一次排程掃描。")
         return
 
-    # 4. 下載數據
-    with st.spinner(f"正在同步 {len(symbol_list)} 檔合約即時 K 線..."):
-        all_data = load_all_charts_data(symbol_list)
+    # 建立多週期切換按鈕
+    st.markdown("### 選擇觀測週期")
+    selected_tf = st.radio("", available_tfs, horizontal=True, label_visibility="collapsed")
+    st.markdown("---")
 
-    # 5. 繪圖渲染
+    filtered_results = [r for r in all_results if r.get('timeframe') == selected_tf]
+    symbol_list = sorted(list(set([r['symbol'] for r in filtered_results])))
+    
+    if not symbol_list:
+        st.warning(f"目前 {selected_tf} 週期沒有符合標的。")
+        return
+
+    pairs_to_fetch = [(s, selected_tf) for s in symbol_list]
+
+    with st.spinner(f"正在同步 {selected_tf} 級別即時 K 線..."):
+        all_data = load_all_charts_data(pairs_to_fetch)
+
     cols = st.columns(2)
     for i, symbol in enumerate(symbol_list):
-        if symbol not in all_data: continue
+        data_key = f"{symbol}_{selected_tf}"
+        if data_key not in all_data: continue
         
-        df = all_data[symbol].tail(100) # 顯示最近 100 根 K 棒
-        df['TimeStr'] = df['Open_time'].dt.strftime('%m-%d %H:00')
+        # 統一顯示最後 120 根，對齊您的分析基準
+        df = all_data[data_key].tail(120) 
+        
+        if selected_tf in ['3m', '15m']:
+            df['TimeStr'] = df['Open_time'].dt.strftime('%m-%d %H:%M')
+        else:
+            df['TimeStr'] = df['Open_time'].dt.strftime('%m-%d %H:00')
 
-        # 建立圖表
-        fig = make_subplots(rows=2, cols=1, shared_xaxes=True, 
-                            row_heights=[0.75, 0.25], vertical_spacing=0.05)
+        fig = make_subplots(rows=2, cols=1, shared_xaxes=True, row_heights=[0.75, 0.25], vertical_spacing=0.05)
 
-        # K線圖
         fig.add_trace(go.Candlestick(
             x=df['TimeStr'], open=df['Open'], high=df['High'], low=df['Low'], close=df['Close'],
             increasing_line_color='#00c087', decreasing_line_color='#ff3b57',
-            increasing_fillcolor='#00c087', decreasing_fillcolor='#ff3b57',
-            name="K線"
+            increasing_fillcolor='#00c087', decreasing_fillcolor='#ff3b57'
         ), row=1, col=1)
 
-        # 均線
-        fig.add_trace(go.Scatter(x=df['TimeStr'], y=df['MA10'], line=dict(color='#FFD700', width=1.5), name='10MA'), row=1, col=1)
-        fig.add_trace(go.Scatter(x=df['TimeStr'], y=df['MA20'], line=dict(color='#FF00FF', width=1.5), name='20MA'), row=1, col=1)
-        fig.add_trace(go.Scatter(x=df['TimeStr'], y=df['MA60'], line=dict(color='#00BFFF', width=1.5), name='60MA'), row=1, col=1)
+        fig.add_trace(go.Scatter(x=df['TimeStr'], y=df['MA10'], line=dict(color='#FFD700', width=1.5)), row=1, col=1)
+        fig.add_trace(go.Scatter(x=df['TimeStr'], y=df['MA20'], line=dict(color='#FF00FF', width=1.5)), row=1, col=1)
+        fig.add_trace(go.Scatter(x=df['TimeStr'], y=df['MA60'], line=dict(color='#00BFFF', width=1.5)), row=1, col=1)
 
-        # 成交量
         colors = ['#00c087' if c >= o else '#ff3b57' for c, o in zip(df['Close'], df['Open'])]
-        fig.add_trace(go.Bar(x=df['TimeStr'], y=df['Volume'], marker_color=colors, name="成交量"), row=2, col=1)
+        fig.add_trace(go.Bar(x=df['TimeStr'], y=df['Volume'], marker_color=colors), row=2, col=1)
 
-        # 版面設定
+        max_rise = max([r['rise_pct'] for r in filtered_results if r['symbol'] == symbol])
+        
         fig.update_layout(
-            height=450,
-            margin=dict(l=10, r=40, t=40, b=10),
-            xaxis_rangeslider_visible=False,
-            template="plotly_white",
-            showlegend=False,
-            title=dict(text=f"<b>{symbol} (1H)</b>", font=dict(size=20, color='#1e1e1e')),
+            height=450, margin=dict(l=10, r=40, t=40, b=10), xaxis_rangeslider_visible=False,
+            template="plotly_white", showlegend=False,
+            title=dict(text=f"<b>{symbol} ({selected_tf}) | 偵測漲幅: {max_rise:.1%}</b>", font=dict(size=18, color='#1e1e1e')),
             hovermode='x unified'
         )
-
         fig.update_xaxes(type='category', nticks=10, showgrid=True, gridcolor='#f0f0f0', row=1, col=1)
         fig.update_yaxes(side='right', showgrid=True, gridcolor='#f0f0f0', row=1, col=1)
         fig.update_yaxes(showticklabels=False, row=2, col=1)
 
-        # 填入欄位
         with cols[i % 2]:
             st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
             st.markdown("---")
