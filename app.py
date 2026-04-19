@@ -79,8 +79,8 @@ def main():
     for i, res in enumerate(display_results):
         symbol = res['symbol']
         df = pd.DataFrame(res['kline_data'])
-        df['MA10'] = df['c'].rolling(10).mean()
-        df['MA20'] = df['c'].rolling(20).mean()
+        df['MA30'] = df['c'].rolling(30).mean()
+        df['MA45'] = df['c'].rolling(45).mean()
         df['MA60'] = df['c'].rolling(60).mean()
         
         plot_df = df.tail(180).copy()
