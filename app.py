@@ -79,8 +79,8 @@ def main():
     for i, res in enumerate(display_results):
         symbol = res['symbol']
         df = pd.DataFrame(res['kline_data'])
-        df['MA10'] = df['c'].rolling(10).mean()
-        df['MA20'] = df['c'].rolling(20).mean()
+        df['MA30'] = df['c'].rolling(30).mean()
+        df['MA45'] = df['c'].rolling(45).mean()
         df['MA60'] = df['c'].rolling(60).mean()
         
         plot_df = df.tail(180).copy()
@@ -105,9 +105,9 @@ def main():
         ), row=1, col=1)
 
         # 均線 (稍微加粗以提升辨識度)
-        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA10'], line=dict(color='#FF5809', width=1.2)), row=1, col=1)
-        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA20'], line=dict(color='#FF0080', width=1.2)), row=1, col=1)
-        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA60'], line=dict(color='#7E3D76', width=1.2)), row=1, col=1)
+        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA30'], line=dict(color='#F75000', width=1)), row=1, col=1)
+        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA45'], line=dict(color='#9F0050', width=1)), row=1, col=1)
+        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA60'], line=dict(color='#6C3365', width=1)), row=1, col=1)
 
         # 成交量
         v_colors = [inc_color if c >= o else dec_color for c, o in zip(plot_df['c'], plot_df['o'])]
