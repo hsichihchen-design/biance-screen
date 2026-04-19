@@ -76,7 +76,7 @@ def main():
     
     display_results = list(unique_dict.values())
     
-    inc_color, dec_color = '#00c087', '#ff3b57'
+    inc_color, dec_color = '#E32636', '#008F39'
 
     for i, res in enumerate(display_results):
         symbol = res['symbol']
