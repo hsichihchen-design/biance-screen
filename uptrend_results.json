@@ -1,5 +1,3416 @@
 {
-  "last_updated": "2026-04-19 11:57:29",
-  "total_segments_found": 0,
-  "results": []
+  "last_updated": "2026-04-19 12:07:09",
+  "total_segments_found": 341,
+  "results": [
+    {
+      "symbol": "XLMUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 03:00:00",
+      "end_date": "2026-04-18 01:00:00",
+      "start_price": 0.15366,
+      "end_price": 0.17713,
+      "rise_pct": 0.1527,
+      "duration_bars": 70
+    },
+    {
+      "symbol": "ZECUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-10 16:00:00",
+      "start_price": 205.07,
+      "end_price": 394.0,
+      "rise_pct": 0.9213,
+      "duration_bars": 35
+    },
+    {
+      "symbol": "ONTUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:24:00",
+      "end_date": "2026-04-19 11:12:00",
+      "start_price": 0.0758,
+      "end_price": 0.0781,
+      "rise_pct": 0.0303,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "KNCUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-23 00:00:00",
+      "end_date": "2026-03-27 08:00:00",
+      "start_price": 0.1279,
+      "end_price": 0.1938,
+      "rise_pct": 0.5152,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "COMPUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 16:00:00",
+      "end_date": "2026-04-10 16:00:00",
+      "start_price": 16.15,
+      "end_price": 22.78,
+      "rise_pct": 0.4105,
+      "duration_bars": 24
+    },
+    {
+      "symbol": "KAVAUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:42:00",
+      "end_date": "2026-04-19 11:24:00",
+      "start_price": 0.0549,
+      "end_price": 0.0568,
+      "rise_pct": 0.0346,
+      "duration_bars": 54
+    },
+    {
+      "symbol": "ENJUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:06:00",
+      "end_date": "2026-04-19 09:03:00",
+      "start_price": 0.05678,
+      "end_price": 0.06176,
+      "rise_pct": 0.0877,
+      "duration_bars": 19
+    },
+    {
+      "symbol": "ENJUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:48:00",
+      "end_date": "2026-04-19 10:42:00",
+      "start_price": 0.05526,
+      "end_price": 0.05839,
+      "rise_pct": 0.0566,
+      "duration_bars": 18
+    },
+    {
+      "symbol": "ENJUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:54:00",
+      "end_date": "2026-04-19 11:33:00",
+      "start_price": 0.05564,
+      "end_price": 0.05794,
+      "rise_pct": 0.0413,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "ENJUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-19 00:30:00",
+      "end_date": "2026-04-19 09:00:00",
+      "start_price": 0.05271,
+      "end_price": 0.06176,
+      "rise_pct": 0.1717,
+      "duration_bars": 34
+    },
+    {
+      "symbol": "BELUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-06 16:00:00",
+      "start_price": 0.0863,
+      "end_price": 0.1382,
+      "rise_pct": 0.6014,
+      "duration_bars": 23
+    },
+    {
+      "symbol": "CHRUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-23 16:00:00",
+      "end_date": "2026-04-03 08:00:00",
+      "start_price": 0.013,
+      "end_price": 0.0219,
+      "rise_pct": 0.6846,
+      "duration_bars": 32
+    },
+    {
+      "symbol": "CHRUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-12 16:00:00",
+      "start_price": 0.0139,
+      "end_price": 0.0196,
+      "rise_pct": 0.4101,
+      "duration_bars": 41
+    },
+    {
+      "symbol": "ALICEUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 20:00:00",
+      "end_date": "2026-04-18 18:00:00",
+      "start_price": 0.109,
+      "end_price": 0.2632,
+      "rise_pct": 1.4147,
+      "duration_bars": 70
+    },
+    {
+      "symbol": "GTCUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:30:00",
+      "end_date": "2026-04-19 11:33:00",
+      "start_price": 0.09327,
+      "end_price": 0.11586,
+      "rise_pct": 0.2422,
+      "duration_bars": 41
+    },
+    {
+      "symbol": "GTCUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 16:30:00",
+      "end_date": "2026-04-18 22:00:00",
+      "start_price": 0.09515,
+      "end_price": 0.10808,
+      "rise_pct": 0.1359,
+      "duration_bars": 22
+    },
+    {
+      "symbol": "GTCUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-19 04:00:00",
+      "end_date": "2026-04-19 07:00:00",
+      "start_price": 0.08917,
+      "end_price": 0.10289,
+      "rise_pct": 0.1539,
+      "duration_bars": 12
+    },
+    {
+      "symbol": "GTCUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 05:00:00",
+      "end_date": "2026-04-18 16:00:00",
+      "start_price": 0.07911,
+      "end_price": 0.12001,
+      "rise_pct": 0.517,
+      "duration_bars": 83
+    },
+    {
+      "symbol": "GTCUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 13:00:00",
+      "end_date": "2026-04-17 19:00:00",
+      "start_price": 0.08512,
+      "end_price": 0.10572,
+      "rise_pct": 0.242,
+      "duration_bars": 6
+    },
+    {
+      "symbol": "GTCUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-03 08:00:00",
+      "end_date": "2026-04-07 08:00:00",
+      "start_price": 0.071,
+      "end_price": 0.101,
+      "rise_pct": 0.4225,
+      "duration_bars": 12
+    },
+    {
+      "symbol": "ATAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-01 16:00:00",
+      "end_date": "2026-04-08 16:00:00",
+      "start_price": 0.0079,
+      "end_price": 0.01143,
+      "rise_pct": 0.4468,
+      "duration_bars": 21
+    },
+    {
+      "symbol": "DYDXUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 13:15:00",
+      "end_date": "2026-04-18 16:45:00",
+      "start_price": 0.1395,
+      "end_price": 0.1523,
+      "rise_pct": 0.0918,
+      "duration_bars": 14
+    },
+    {
+      "symbol": "DYDXUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 08:00:00",
+      "end_date": "2026-04-17 09:00:00",
+      "start_price": 0.093,
+      "end_price": 0.1525,
+      "rise_pct": 0.6398,
+      "duration_bars": 49
+    },
+    {
+      "symbol": "DYDXUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-23 00:00:00",
+      "end_date": "2026-04-08 08:00:00",
+      "start_price": 0.078,
+      "end_price": 0.109,
+      "rise_pct": 0.3974,
+      "duration_bars": 49
+    },
+    {
+      "symbol": "CTSIUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-03 16:00:00",
+      "start_price": 0.0211,
+      "end_price": 0.0538,
+      "rise_pct": 1.5498,
+      "duration_bars": 14
+    },
+    {
+      "symbol": "CTSIUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-11 16:00:00",
+      "end_date": "2026-04-16 00:00:00",
+      "start_price": 0.0286,
+      "end_price": 0.0464,
+      "rise_pct": 0.6224,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "LPTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-07 16:00:00",
+      "end_date": "2026-04-10 16:00:00",
+      "start_price": 1.866,
+      "end_price": 2.745,
+      "rise_pct": 0.4711,
+      "duration_bars": 9
+    },
+    {
+      "symbol": "DUSKUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-22 08:00:00",
+      "end_date": "2026-04-13 00:00:00",
+      "start_price": 0.07799,
+      "end_price": 0.17583,
+      "rise_pct": 1.2545,
+      "duration_bars": 65
+    },
+    {
+      "symbol": "API3USDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 03:00:00",
+      "end_date": "2026-04-18 23:00:00",
+      "start_price": 0.2784,
+      "end_price": 0.4668,
+      "rise_pct": 0.6767,
+      "duration_bars": 92
+    },
+    {
+      "symbol": "APEUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 03:00:00",
+      "end_date": "2026-04-18 21:00:00",
+      "start_price": 0.0864,
+      "end_price": 0.1196,
+      "rise_pct": 0.3843,
+      "duration_bars": 90
+    },
+    {
+      "symbol": "HIGHUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 23:00:00",
+      "end_date": "2026-04-18 15:00:00",
+      "start_price": 0.1066,
+      "end_price": 0.5853,
+      "rise_pct": 4.4906,
+      "duration_bars": 40
+    },
+    {
+      "symbol": "PHBUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 07:36:00",
+      "end_date": "2026-04-19 10:00:00",
+      "start_price": 0.1515,
+      "end_price": 0.223,
+      "rise_pct": 0.4719,
+      "duration_bars": 48
+    },
+    {
+      "symbol": "PHBUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:15:00",
+      "end_date": "2026-04-19 11:06:00",
+      "start_price": 0.1541,
+      "end_price": 0.2064,
+      "rise_pct": 0.3394,
+      "duration_bars": 37
+    },
+    {
+      "symbol": "PHBUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 09:30:00",
+      "end_date": "2026-04-19 07:00:00",
+      "start_price": 0.1047,
+      "end_price": 0.213,
+      "rise_pct": 1.0344,
+      "duration_bars": 86
+    },
+    {
+      "symbol": "PHBUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 20:30:00",
+      "end_date": "2026-04-19 03:00:00",
+      "start_price": 0.1124,
+      "end_price": 0.1412,
+      "rise_pct": 0.2562,
+      "duration_bars": 26
+    },
+    {
+      "symbol": "PHBUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 03:00:00",
+      "end_date": "2026-04-18 15:00:00",
+      "start_price": 0.0901,
+      "end_price": 0.1384,
+      "rise_pct": 0.5361,
+      "duration_bars": 84
+    },
+    {
+      "symbol": "ARBUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-11 08:00:00",
+      "start_price": 0.0855,
+      "end_price": 0.1226,
+      "rise_pct": 0.4339,
+      "duration_bars": 37
+    },
+    {
+      "symbol": "JOEUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-07 16:00:00",
+      "end_date": "2026-04-15 16:00:00",
+      "start_price": 0.03512,
+      "end_price": 0.05004,
+      "rise_pct": 0.4248,
+      "duration_bars": 24
+    },
+    {
+      "symbol": "HFTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-03 08:00:00",
+      "start_price": 0.01139,
+      "end_price": 0.01569,
+      "rise_pct": 0.3775,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "BLURUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 20:45:00",
+      "end_date": "2026-04-19 01:30:00",
+      "start_price": 0.0246,
+      "end_price": 0.02722,
+      "rise_pct": 0.1065,
+      "duration_bars": 19
+    },
+    {
+      "symbol": "BLURUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 09:00:00",
+      "end_date": "2026-04-16 10:00:00",
+      "start_price": 0.01996,
+      "end_price": 0.0294,
+      "rise_pct": 0.4729,
+      "duration_bars": 25
+    },
+    {
+      "symbol": "BLURUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-01 16:00:00",
+      "start_price": 0.01653,
+      "end_price": 0.02548,
+      "rise_pct": 0.5414,
+      "duration_bars": 8
+    },
+    {
+      "symbol": "BLURUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-07 16:00:00",
+      "end_date": "2026-04-09 16:00:00",
+      "start_price": 0.01745,
+      "end_price": 0.0249,
+      "rise_pct": 0.4269,
+      "duration_bars": 6
+    },
+    {
+      "symbol": "NMRUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-11 16:00:00",
+      "start_price": 6.194,
+      "end_price": 9.679,
+      "rise_pct": 0.5626,
+      "duration_bars": 38
+    },
+    {
+      "symbol": "DODOXUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 08:00:00",
+      "end_date": "2026-04-18 16:00:00",
+      "start_price": 0.01594,
+      "end_price": 0.02006,
+      "rise_pct": 0.2587,
+      "duration_bars": 80
+    },
+    {
+      "symbol": "DODOXUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-01 16:00:00",
+      "start_price": 0.01285,
+      "end_price": 0.01933,
+      "rise_pct": 0.5049,
+      "duration_bars": 8
+    },
+    {
+      "symbol": "WAXPUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-14 08:00:00",
+      "end_date": "2026-03-21 00:00:00",
+      "start_price": 0.00628,
+      "end_price": 0.0085,
+      "rise_pct": 0.3543,
+      "duration_bars": 20
+    },
+    {
+      "symbol": "RIFUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:33:00",
+      "end_date": "2026-04-19 09:06:00",
+      "start_price": 0.04255,
+      "end_price": 0.04391,
+      "rise_pct": 0.032,
+      "duration_bars": 11
+    },
+    {
+      "symbol": "RIFUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:51:00",
+      "end_date": "2026-04-19 11:30:00",
+      "start_price": 0.04245,
+      "end_price": 0.04374,
+      "rise_pct": 0.0304,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "RIFUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-15 16:00:00",
+      "start_price": 0.03312,
+      "end_price": 0.05083,
+      "rise_pct": 0.5347,
+      "duration_bars": 50
+    },
+    {
+      "symbol": "POLYXUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-15 00:00:00",
+      "end_date": "2026-03-17 16:00:00",
+      "start_price": 0.03895,
+      "end_price": 0.05884,
+      "rise_pct": 0.5107,
+      "duration_bars": 8
+    },
+    {
+      "symbol": "ILVUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-10 16:00:00",
+      "start_price": 3.273,
+      "end_price": 5.82,
+      "rise_pct": 0.7782,
+      "duration_bars": 35
+    },
+    {
+      "symbol": "KASUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-16 00:00:00",
+      "end_date": "2026-03-19 16:00:00",
+      "start_price": 0.03006,
+      "end_price": 0.04186,
+      "rise_pct": 0.3925,
+      "duration_bars": 11
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-10 00:00:00",
+      "start_price": 0.03632,
+      "end_price": 0.05025,
+      "rise_pct": 0.3835,
+      "duration_bars": 33
+    },
+    {
+      "symbol": "SUPERUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-23 16:00:00",
+      "end_date": "2026-03-26 08:00:00",
+      "start_price": 0.1033,
+      "end_price": 0.1397,
+      "rise_pct": 0.3524,
+      "duration_bars": 8
+    },
+    {
+      "symbol": "SUPERUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-05 16:00:00",
+      "end_date": "2026-04-06 16:00:00",
+      "start_price": 0.0931,
+      "end_price": 0.1367,
+      "rise_pct": 0.4683,
+      "duration_bars": 3
+    },
+    {
+      "symbol": "JTOUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-23 00:00:00",
+      "end_date": "2026-03-25 08:00:00",
+      "start_price": 0.2739,
+      "end_price": 0.3849,
+      "rise_pct": 0.4053,
+      "duration_bars": 7
+    },
+    {
+      "symbol": "MOVRUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-01 08:00:00",
+      "start_price": 0.976,
+      "end_price": 1.369,
+      "rise_pct": 0.4027,
+      "duration_bars": 7
+    },
+    {
+      "symbol": "NFPUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:36:00",
+      "end_date": "2026-04-19 11:30:00",
+      "start_price": 0.01414,
+      "end_price": 0.01462,
+      "rise_pct": 0.0339,
+      "duration_bars": 18
+    },
+    {
+      "symbol": "XAIUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:27:00",
+      "end_date": "2026-04-19 11:15:00",
+      "start_price": 0.01048,
+      "end_price": 0.01093,
+      "rise_pct": 0.0429,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "XAIUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 08:00:00",
+      "end_date": "2026-04-19 02:00:00",
+      "start_price": 0.00928,
+      "end_price": 0.01233,
+      "rise_pct": 0.3287,
+      "duration_bars": 90
+    },
+    {
+      "symbol": "ZETAUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 07:36:00",
+      "end_date": "2026-04-19 08:03:00",
+      "start_price": 0.05439,
+      "end_price": 0.05834,
+      "rise_pct": 0.0726,
+      "duration_bars": 9
+    },
+    {
+      "symbol": "ZETAUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:12:00",
+      "end_date": "2026-04-19 10:45:00",
+      "start_price": 0.05502,
+      "end_price": 0.05684,
+      "rise_pct": 0.0331,
+      "duration_bars": 31
+    },
+    {
+      "symbol": "RONINUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:03:00",
+      "end_date": "2026-04-19 09:18:00",
+      "start_price": 0.0995,
+      "end_price": 0.1058,
+      "rise_pct": 0.0633,
+      "duration_bars": 25
+    },
+    {
+      "symbol": "RONINUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:12:00",
+      "end_date": "2026-04-19 11:15:00",
+      "start_price": 0.0991,
+      "end_price": 0.1039,
+      "rise_pct": 0.0484,
+      "duration_bars": 21
+    },
+    {
+      "symbol": "RONINUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 10:00:00",
+      "end_date": "2026-04-18 16:00:00",
+      "start_price": 0.0963,
+      "end_price": 0.1051,
+      "rise_pct": 0.0914,
+      "duration_bars": 24
+    },
+    {
+      "symbol": "RONINUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 21:30:00",
+      "end_date": "2026-04-18 23:15:00",
+      "start_price": 0.0955,
+      "end_price": 0.1081,
+      "rise_pct": 0.1319,
+      "duration_bars": 7
+    },
+    {
+      "symbol": "RONINUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 06:00:00",
+      "end_date": "2026-04-18 23:00:00",
+      "start_price": 0.0874,
+      "end_price": 0.1081,
+      "rise_pct": 0.2368,
+      "duration_bars": 89
+    },
+    {
+      "symbol": "PORTALUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:03:00",
+      "end_date": "2026-04-19 08:39:00",
+      "start_price": 0.01067,
+      "end_price": 0.01101,
+      "rise_pct": 0.0319,
+      "duration_bars": 12
+    },
+    {
+      "symbol": "PORTALUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:30:00",
+      "end_date": "2026-04-19 11:30:00",
+      "start_price": 0.01015,
+      "end_price": 0.01357,
+      "rise_pct": 0.3369,
+      "duration_bars": 20
+    },
+    {
+      "symbol": "PORTALUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 13:00:00",
+      "end_date": "2026-04-18 15:00:00",
+      "start_price": 0.0082,
+      "end_price": 0.02,
+      "rise_pct": 1.439,
+      "duration_bars": 74
+    },
+    {
+      "symbol": "AXLUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:15:00",
+      "end_date": "2026-04-19 08:45:00",
+      "start_price": 0.05988,
+      "end_price": 0.06276,
+      "rise_pct": 0.0481,
+      "duration_bars": 10
+    },
+    {
+      "symbol": "METISUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:42:00",
+      "end_date": "2026-04-19 09:06:00",
+      "start_price": 3.403,
+      "end_price": 3.506,
+      "rise_pct": 0.0303,
+      "duration_bars": 8
+    },
+    {
+      "symbol": "METISUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:57:00",
+      "end_date": "2026-04-19 11:12:00",
+      "start_price": 3.387,
+      "end_price": 3.499,
+      "rise_pct": 0.0331,
+      "duration_bars": 5
+    },
+    {
+      "symbol": "AEVOUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-03 16:00:00",
+      "start_price": 0.02027,
+      "end_price": 0.02794,
+      "rise_pct": 0.3784,
+      "duration_bars": 14
+    },
+    {
+      "symbol": "ENAUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 03:00:00",
+      "end_date": "2026-04-18 05:00:00",
+      "start_price": 0.09436,
+      "end_price": 0.13669,
+      "rise_pct": 0.4486,
+      "duration_bars": 74
+    },
+    {
+      "symbol": "ENAUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 16:00:00",
+      "end_date": "2026-04-17 03:00:00",
+      "start_price": 0.09451,
+      "end_price": 0.11567,
+      "rise_pct": 0.2239,
+      "duration_bars": 35
+    },
+    {
+      "symbol": "REZUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-15 00:00:00",
+      "end_date": "2026-03-16 00:00:00",
+      "start_price": 0.00315,
+      "end_price": 0.00487,
+      "rise_pct": 0.5446,
+      "duration_bars": 3
+    },
+    {
+      "symbol": "SYNUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-03 08:00:00",
+      "start_price": 0.04309,
+      "end_price": 0.06665,
+      "rise_pct": 0.5468,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "FLUXUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-26 16:00:00",
+      "end_date": "2026-04-08 16:00:00",
+      "start_price": 0.04436,
+      "end_price": 0.06089,
+      "rise_pct": 0.3726,
+      "duration_bars": 39
+    },
+    {
+      "symbol": "SCRUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:30:00",
+      "end_date": "2026-04-19 11:18:00",
+      "start_price": 0.04295,
+      "end_price": 0.04512,
+      "rise_pct": 0.0505,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "SAFEUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-05 16:00:00",
+      "start_price": 0.0897,
+      "end_price": 0.1409,
+      "rise_pct": 0.5708,
+      "duration_bars": 20
+    },
+    {
+      "symbol": "SANTOSUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 16:45:00",
+      "end_date": "2026-04-18 21:15:00",
+      "start_price": 1.198,
+      "end_price": 1.35,
+      "rise_pct": 0.1269,
+      "duration_bars": 18
+    },
+    {
+      "symbol": "SANTOSUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 21:30:00",
+      "end_date": "2026-04-19 07:00:00",
+      "start_price": 1.195,
+      "end_price": 1.318,
+      "rise_pct": 0.1029,
+      "duration_bars": 38
+    },
+    {
+      "symbol": "SANTOSUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 10:00:00",
+      "end_date": "2026-04-18 21:00:00",
+      "start_price": 1.043,
+      "end_price": 1.35,
+      "rise_pct": 0.2943,
+      "duration_bars": 83
+    },
+    {
+      "symbol": "GRASSUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 16:00:00",
+      "end_date": "2026-04-10 08:00:00",
+      "start_price": 0.2666,
+      "end_price": 0.3634,
+      "rise_pct": 0.3631,
+      "duration_bars": 23
+    },
+    {
+      "symbol": "BANUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-19 16:00:00",
+      "end_date": "2026-03-31 08:00:00",
+      "start_price": 0.0472,
+      "end_price": 0.0688,
+      "rise_pct": 0.4576,
+      "duration_bars": 35
+    },
+    {
+      "symbol": "BANUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 00:00:00",
+      "end_date": "2026-04-13 08:00:00",
+      "start_price": 0.04013,
+      "end_price": 0.09762,
+      "rise_pct": 1.4326,
+      "duration_bars": 34
+    },
+    {
+      "symbol": "SCRTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-10 16:00:00",
+      "start_price": 0.06938,
+      "end_price": 0.10089,
+      "rise_pct": 0.4542,
+      "duration_bars": 35
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:12:00",
+      "end_date": "2026-04-19 10:45:00",
+      "start_price": 1.906,
+      "end_price": 1.9774,
+      "rise_pct": 0.0375,
+      "duration_bars": 31
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 21:00:00",
+      "end_date": "2026-04-17 23:00:00",
+      "start_price": 1.6981,
+      "end_price": 2.056,
+      "rise_pct": 0.2108,
+      "duration_bars": 26
+    },
+    {
+      "symbol": "CHILLGUYUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 07:36:00",
+      "end_date": "2026-04-19 07:57:00",
+      "start_price": 0.01316,
+      "end_price": 0.01462,
+      "rise_pct": 0.1109,
+      "duration_bars": 7
+    },
+    {
+      "symbol": "CHILLGUYUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:33:00",
+      "end_date": "2026-04-19 10:00:00",
+      "start_price": 0.01309,
+      "end_price": 0.01358,
+      "rise_pct": 0.0373,
+      "duration_bars": 29
+    },
+    {
+      "symbol": "CHILLGUYUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 12:30:00",
+      "end_date": "2026-04-19 07:45:00",
+      "start_price": 0.0127,
+      "end_price": 0.01462,
+      "rise_pct": 0.1508,
+      "duration_bars": 77
+    },
+    {
+      "symbol": "CHILLGUYUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 15:45:00",
+      "end_date": "2026-04-19 01:45:00",
+      "start_price": 0.01273,
+      "end_price": 0.01393,
+      "rise_pct": 0.0937,
+      "duration_bars": 40
+    },
+    {
+      "symbol": "CHILLGUYUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 17:00:00",
+      "end_date": "2026-04-18 11:00:00",
+      "start_price": 0.01136,
+      "end_price": 0.01419,
+      "rise_pct": 0.2491,
+      "duration_bars": 66
+    },
+    {
+      "symbol": "CHILLGUYUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-13 16:00:00",
+      "start_price": 0.00675,
+      "end_price": 0.01721,
+      "rise_pct": 1.5499,
+      "duration_bars": 44
+    },
+    {
+      "symbol": "MOVEUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 03:00:00",
+      "end_date": "2026-04-17 21:00:00",
+      "start_price": 0.01664,
+      "end_price": 0.01945,
+      "rise_pct": 0.1689,
+      "duration_bars": 66
+    },
+    {
+      "symbol": "KOMAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-29 16:00:00",
+      "end_date": "2026-04-05 16:00:00",
+      "start_price": 0.00589,
+      "end_price": 0.0145,
+      "rise_pct": 1.4622,
+      "duration_bars": 21
+    },
+    {
+      "symbol": "SPXUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-12 00:00:00",
+      "start_price": 0.2545,
+      "end_price": 0.3444,
+      "rise_pct": 0.3532,
+      "duration_bars": 39
+    },
+    {
+      "symbol": "DEGOUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 07:39:00",
+      "end_date": "2026-04-19 08:00:00",
+      "start_price": 0.1561,
+      "end_price": 0.1668,
+      "rise_pct": 0.0685,
+      "duration_bars": 7
+    },
+    {
+      "symbol": "DEGOUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:36:00",
+      "end_date": "2026-04-19 09:30:00",
+      "start_price": 0.1511,
+      "end_price": 0.1591,
+      "rise_pct": 0.0529,
+      "duration_bars": 18
+    },
+    {
+      "symbol": "DEGOUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:48:00",
+      "end_date": "2026-04-19 10:12:00",
+      "start_price": 0.1517,
+      "end_price": 0.1575,
+      "rise_pct": 0.0382,
+      "duration_bars": 8
+    },
+    {
+      "symbol": "DEGOUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 11:06:00",
+      "end_date": "2026-04-19 11:30:00",
+      "start_price": 0.1515,
+      "end_price": 0.158,
+      "rise_pct": 0.0429,
+      "duration_bars": 8
+    },
+    {
+      "symbol": "VANAUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:42:00",
+      "end_date": "2026-04-19 09:09:00",
+      "start_price": 1.349,
+      "end_price": 1.398,
+      "rise_pct": 0.0363,
+      "duration_bars": 9
+    },
+    {
+      "symbol": "LUMIAUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 03:00:00",
+      "end_date": "2026-04-18 23:00:00",
+      "start_price": 0.08351,
+      "end_price": 0.13899,
+      "rise_pct": 0.6644,
+      "duration_bars": 68
+    },
+    {
+      "symbol": "LUMIAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-31 00:00:00",
+      "end_date": "2026-04-08 00:00:00",
+      "start_price": 0.05966,
+      "end_price": 0.0847,
+      "rise_pct": 0.4197,
+      "duration_bars": 24
+    },
+    {
+      "symbol": "FARTCOINUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 00:00:00",
+      "end_date": "2026-04-09 00:00:00",
+      "start_price": 0.1542,
+      "end_price": 0.2519,
+      "rise_pct": 0.6336,
+      "duration_bars": 21
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 08:00:00",
+      "end_date": "2026-04-18 18:00:00",
+      "start_price": 9.874,
+      "end_price": 14.748,
+      "rise_pct": 0.4936,
+      "duration_bars": 82
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 02:00:00",
+      "end_date": "2026-04-17 20:00:00",
+      "start_price": 10.975,
+      "end_price": 12.733,
+      "rise_pct": 0.1602,
+      "duration_bars": 18
+    },
+    {
+      "symbol": "GRIFFAINUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 17:00:00",
+      "end_date": "2026-04-17 19:00:00",
+      "start_price": 0.01283,
+      "end_price": 0.01995,
+      "rise_pct": 0.5545,
+      "duration_bars": 26
+    },
+    {
+      "symbol": "GRIFFAINUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 19:00:00",
+      "end_date": "2026-04-18 17:00:00",
+      "start_price": 0.01547,
+      "end_price": 0.01794,
+      "rise_pct": 0.1599,
+      "duration_bars": 22
+    },
+    {
+      "symbol": "GRIFFAINUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-22 08:00:00",
+      "end_date": "2026-04-09 16:00:00",
+      "start_price": 0.00833,
+      "end_price": 0.01843,
+      "rise_pct": 1.2128,
+      "duration_bars": 55
+    },
+    {
+      "symbol": "ZEREBROUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-11 08:00:00",
+      "start_price": 0.0058,
+      "end_price": 0.01085,
+      "rise_pct": 0.8713,
+      "duration_bars": 37
+    },
+    {
+      "symbol": "BIOUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 08:45:00",
+      "end_date": "2026-04-18 09:45:00",
+      "start_price": 0.02786,
+      "end_price": 0.03154,
+      "rise_pct": 0.1321,
+      "duration_bars": 4
+    },
+    {
+      "symbol": "BIOUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 20:30:00",
+      "end_date": "2026-04-19 08:00:00",
+      "start_price": 0.02649,
+      "end_price": 0.0346,
+      "rise_pct": 0.3062,
+      "duration_bars": 46
+    },
+    {
+      "symbol": "BIOUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-19 01:00:00",
+      "end_date": "2026-04-19 02:15:00",
+      "start_price": 0.02655,
+      "end_price": 0.02939,
+      "rise_pct": 0.107,
+      "duration_bars": 5
+    },
+    {
+      "symbol": "ALCHUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:39:00",
+      "end_date": "2026-04-19 10:03:00",
+      "start_price": 0.07056,
+      "end_price": 0.07301,
+      "rise_pct": 0.0347,
+      "duration_bars": 28
+    },
+    {
+      "symbol": "ALCHUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-15 08:00:00",
+      "end_date": "2026-03-21 00:00:00",
+      "start_price": 0.06532,
+      "end_price": 0.09026,
+      "rise_pct": 0.3818,
+      "duration_bars": 17
+    },
+    {
+      "symbol": "ALCHUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 08:00:00",
+      "end_date": "2026-04-15 16:00:00",
+      "start_price": 0.0583,
+      "end_price": 0.10491,
+      "rise_pct": 0.7995,
+      "duration_bars": 40
+    },
+    {
+      "symbol": "SWARMSUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 10:30:00",
+      "end_date": "2026-04-18 14:30:00",
+      "start_price": 0.01786,
+      "end_price": 0.01942,
+      "rise_pct": 0.0877,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "SWARMSUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-19 05:45:00",
+      "end_date": "2026-04-19 09:30:00",
+      "start_price": 0.0162,
+      "end_price": 0.0176,
+      "rise_pct": 0.086,
+      "duration_bars": 15
+    },
+    {
+      "symbol": "SWARMSUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-19 16:00:00",
+      "end_date": "2026-04-11 00:00:00",
+      "start_price": 0.00614,
+      "end_price": 0.01888,
+      "rise_pct": 2.0754,
+      "duration_bars": 67
+    },
+    {
+      "symbol": "PROMUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 04:00:00",
+      "end_date": "2026-04-18 23:00:00",
+      "start_price": 1.304,
+      "end_price": 2.892,
+      "rise_pct": 1.2178,
+      "duration_bars": 67
+    },
+    {
+      "symbol": "PROMUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 22:00:00",
+      "end_date": "2026-04-17 14:00:00",
+      "start_price": 1.346,
+      "end_price": 1.708,
+      "rise_pct": 0.2689,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "ARCUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-18 16:00:00",
+      "end_date": "2026-04-12 08:00:00",
+      "start_price": 0.03485,
+      "end_price": 0.08098,
+      "rise_pct": 1.3237,
+      "duration_bars": 74
+    },
+    {
+      "symbol": "ARCUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-25 16:00:00",
+      "end_date": "2026-04-02 00:00:00",
+      "start_price": 0.04028,
+      "end_price": 0.06129,
+      "rise_pct": 0.5216,
+      "duration_bars": 22
+    },
+    {
+      "symbol": "AVAAIUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 13:00:00",
+      "end_date": "2026-04-18 13:00:00",
+      "start_price": 0.00804,
+      "end_price": 0.01103,
+      "rise_pct": 0.3716,
+      "duration_bars": 72
+    },
+    {
+      "symbol": "AVAAIUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 00:00:00",
+      "end_date": "2026-04-17 19:00:00",
+      "start_price": 0.00842,
+      "end_price": 0.0097,
+      "rise_pct": 0.1511,
+      "duration_bars": 19
+    },
+    {
+      "symbol": "VINEUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 11:45:00",
+      "end_date": "2026-04-18 15:45:00",
+      "start_price": 0.02007,
+      "end_price": 0.02174,
+      "rise_pct": 0.0832,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "VVVUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-20 00:00:00",
+      "end_date": "2026-04-14 16:00:00",
+      "start_price": 5.191,
+      "end_price": 9.966,
+      "rise_pct": 0.9199,
+      "duration_bars": 77
+    },
+    {
+      "symbol": "HEIUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-03 00:00:00",
+      "start_price": 0.07002,
+      "end_price": 0.10011,
+      "rise_pct": 0.4297,
+      "duration_bars": 12
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:36:00",
+      "end_date": "2026-04-19 11:18:00",
+      "start_price": 0.438,
+      "end_price": 0.4569,
+      "rise_pct": 0.0432,
+      "duration_bars": 54
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-19 00:00:00",
+      "end_date": "2026-04-08 16:00:00",
+      "start_price": 0.3477,
+      "end_price": 0.488,
+      "rise_pct": 0.4035,
+      "duration_bars": 62
+    },
+    {
+      "symbol": "REDUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-31 08:00:00",
+      "end_date": "2026-04-07 08:00:00",
+      "start_price": 0.099,
+      "end_price": 0.2356,
+      "rise_pct": 1.3798,
+      "duration_bars": 21
+    },
+    {
+      "symbol": "REDUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-05 16:00:00",
+      "end_date": "2026-04-15 08:00:00",
+      "start_price": 0.1,
+      "end_price": 0.1808,
+      "rise_pct": 0.808,
+      "duration_bars": 29
+    },
+    {
+      "symbol": "VICUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-03 08:00:00",
+      "start_price": 0.03801,
+      "end_price": 0.0579,
+      "rise_pct": 0.5233,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "BMTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-03 00:00:00",
+      "start_price": 0.01343,
+      "end_price": 0.01876,
+      "rise_pct": 0.3969,
+      "duration_bars": 12
+    },
+    {
+      "symbol": "FORMUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-03 08:00:00",
+      "end_date": "2026-04-14 16:00:00",
+      "start_price": 0.1931,
+      "end_price": 0.2999,
+      "rise_pct": 0.5531,
+      "duration_bars": 34
+    },
+    {
+      "symbol": "BROCCOLI714USDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 16:00:00",
+      "end_date": "2026-04-14 00:00:00",
+      "start_price": 0.01142,
+      "end_price": 0.02087,
+      "rise_pct": 0.8275,
+      "duration_bars": 34
+    },
+    {
+      "symbol": "BROCCOLIF3BUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 16:00:00",
+      "end_date": "2026-04-14 16:00:00",
+      "start_price": 0.00306,
+      "end_price": 0.0066,
+      "rise_pct": 1.1569,
+      "duration_bars": 36
+    },
+    {
+      "symbol": "BRUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:51:00",
+      "end_date": "2026-04-19 11:30:00",
+      "start_price": 0.10011,
+      "end_price": 0.11003,
+      "rise_pct": 0.0991,
+      "duration_bars": 53
+    },
+    {
+      "symbol": "BRUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 09:45:00",
+      "end_date": "2026-04-18 20:00:00",
+      "start_price": 0.11085,
+      "end_price": 0.12398,
+      "rise_pct": 0.1184,
+      "duration_bars": 41
+    },
+    {
+      "symbol": "BRUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-19 03:15:00",
+      "end_date": "2026-04-19 05:45:00",
+      "start_price": 0.09673,
+      "end_price": 0.1103,
+      "rise_pct": 0.1403,
+      "duration_bars": 10
+    },
+    {
+      "symbol": "PLUMEUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:24:00",
+      "end_date": "2026-04-19 11:30:00",
+      "start_price": 0.01114,
+      "end_price": 0.01148,
+      "rise_pct": 0.0305,
+      "duration_bars": 22
+    },
+    {
+      "symbol": "WALUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-11 00:00:00",
+      "start_price": 0.0648,
+      "end_price": 0.0884,
+      "rise_pct": 0.3642,
+      "duration_bars": 36
+    },
+    {
+      "symbol": "GUNUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 06:42:00",
+      "end_date": "2026-04-19 11:15:00",
+      "start_price": 0.0145,
+      "end_price": 0.01523,
+      "rise_pct": 0.0503,
+      "duration_bars": 91
+    },
+    {
+      "symbol": "PROMPTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-31 08:00:00",
+      "end_date": "2026-04-03 16:00:00",
+      "start_price": 0.02803,
+      "end_price": 0.03924,
+      "rise_pct": 0.3999,
+      "duration_bars": 10
+    },
+    {
+      "symbol": "INITUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 14:00:00",
+      "end_date": "2026-04-18 20:00:00",
+      "start_price": 0.07925,
+      "end_price": 0.10054,
+      "rise_pct": 0.2686,
+      "duration_bars": 78
+    },
+    {
+      "symbol": "JSTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-15 16:00:00",
+      "end_date": "2026-04-13 00:00:00",
+      "start_price": 0.05108,
+      "end_price": 0.08582,
+      "rise_pct": 0.6802,
+      "duration_bars": 85
+    },
+    {
+      "symbol": "DOLOUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-02 16:00:00",
+      "start_price": 0.02912,
+      "end_price": 0.04344,
+      "rise_pct": 0.4918,
+      "duration_bars": 11
+    },
+    {
+      "symbol": "HAEDALUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:21:00",
+      "end_date": "2026-04-19 11:21:00",
+      "start_price": 0.03111,
+      "end_price": 0.03254,
+      "rise_pct": 0.046,
+      "duration_bars": 20
+    },
+    {
+      "symbol": "ALPINEUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:06:00",
+      "end_date": "2026-04-19 10:12:00",
+      "start_price": 0.4477,
+      "end_price": 0.4667,
+      "rise_pct": 0.0424,
+      "duration_bars": 22
+    },
+    {
+      "symbol": "ALPINEUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 12:00:00",
+      "end_date": "2026-04-18 19:00:00",
+      "start_price": 0.4384,
+      "end_price": 0.4996,
+      "rise_pct": 0.1396,
+      "duration_bars": 28
+    },
+    {
+      "symbol": "ALPINEUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 15:00:00",
+      "end_date": "2026-04-18 19:00:00",
+      "start_price": 0.4147,
+      "end_price": 0.4996,
+      "rise_pct": 0.2047,
+      "duration_bars": 76
+    },
+    {
+      "symbol": "OGUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:54:00",
+      "end_date": "2026-04-19 10:09:00",
+      "start_price": 3.117,
+      "end_price": 3.233,
+      "rise_pct": 0.0372,
+      "duration_bars": 25
+    },
+    {
+      "symbol": "OGUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 08:45:00",
+      "end_date": "2026-04-18 22:00:00",
+      "start_price": 3.002,
+      "end_price": 3.417,
+      "rise_pct": 0.1382,
+      "duration_bars": 53
+    },
+    {
+      "symbol": "OGUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 01:00:00",
+      "end_date": "2026-04-18 22:00:00",
+      "start_price": 2.918,
+      "end_price": 3.417,
+      "rise_pct": 0.171,
+      "duration_bars": 45
+    },
+    {
+      "symbol": "OGUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-23 08:00:00",
+      "end_date": "2026-04-15 00:00:00",
+      "start_price": 2.419,
+      "end_price": 3.639,
+      "rise_pct": 0.5043,
+      "duration_bars": 68
+    },
+    {
+      "symbol": "SKYAIUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-20 00:00:00",
+      "end_date": "2026-04-11 16:00:00",
+      "start_price": 0.04225,
+      "end_price": 0.141,
+      "rise_pct": 2.3373,
+      "duration_bars": 68
+    },
+    {
+      "symbol": "SKYAIUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-01 00:00:00",
+      "end_date": "2026-04-04 16:00:00",
+      "start_price": 0.05749,
+      "end_price": 0.08888,
+      "rise_pct": 0.546,
+      "duration_bars": 11
+    },
+    {
+      "symbol": "NXPCUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:24:00",
+      "end_date": "2026-04-19 09:00:00",
+      "start_price": 0.2847,
+      "end_price": 0.2962,
+      "rise_pct": 0.0404,
+      "duration_bars": 12
+    },
+    {
+      "symbol": "AGTUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 13:00:00",
+      "end_date": "2026-04-18 13:00:00",
+      "start_price": 0.01047,
+      "end_price": 0.01676,
+      "rise_pct": 0.6012,
+      "duration_bars": 72
+    },
+    {
+      "symbol": "AGTUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 22:00:00",
+      "end_date": "2026-04-17 14:00:00",
+      "start_price": 0.01119,
+      "end_price": 0.013,
+      "rise_pct": 0.1623,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "AGTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-16 16:00:00",
+      "end_date": "2026-04-11 00:00:00",
+      "start_price": 0.0054,
+      "end_price": 0.01832,
+      "rise_pct": 2.3934,
+      "duration_bars": 76
+    },
+    {
+      "symbol": "AGTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-27 08:00:00",
+      "end_date": "2026-04-01 00:00:00",
+      "start_price": 0.00547,
+      "end_price": 0.00791,
+      "rise_pct": 0.4459,
+      "duration_bars": 14
+    },
+    {
+      "symbol": "SOONUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-10 08:00:00",
+      "end_date": "2026-04-11 08:00:00",
+      "start_price": 0.1003,
+      "end_price": 0.1612,
+      "rise_pct": 0.6072,
+      "duration_bars": 3
+    },
+    {
+      "symbol": "HUMAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-23 00:00:00",
+      "end_date": "2026-03-25 08:00:00",
+      "start_price": 0.01428,
+      "end_price": 0.02129,
+      "rise_pct": 0.491,
+      "duration_bars": 7
+    },
+    {
+      "symbol": "1000000BOBUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-03 08:00:00",
+      "start_price": 0.00992,
+      "end_price": 0.01345,
+      "rise_pct": 0.3558,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "PUMPBTCUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-18 16:00:00",
+      "end_date": "2026-04-08 00:00:00",
+      "start_price": 0.01388,
+      "end_price": 0.01884,
+      "rise_pct": 0.3573,
+      "duration_bars": 61
+    },
+    {
+      "symbol": "HUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 16:00:00",
+      "end_date": "2026-04-11 08:00:00",
+      "start_price": 0.07725,
+      "end_price": 0.11273,
+      "rise_pct": 0.4593,
+      "duration_bars": 26
+    },
+    {
+      "symbol": "ICNTUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:24:00",
+      "end_date": "2026-04-19 10:03:00",
+      "start_price": 0.392,
+      "end_price": 0.4081,
+      "rise_pct": 0.0411,
+      "duration_bars": 33
+    },
+    {
+      "symbol": "ICNTUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 21:15:00",
+      "end_date": "2026-04-19 06:15:00",
+      "start_price": 0.3714,
+      "end_price": 0.4138,
+      "rise_pct": 0.1142,
+      "duration_bars": 36
+    },
+    {
+      "symbol": "ICNTUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 06:00:00",
+      "end_date": "2026-04-17 21:00:00",
+      "start_price": 0.3197,
+      "end_price": 0.4087,
+      "rise_pct": 0.2784,
+      "duration_bars": 15
+    },
+    {
+      "symbol": "ICNTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-22 08:00:00",
+      "end_date": "2026-03-30 00:00:00",
+      "start_price": 0.3069,
+      "end_price": 0.4685,
+      "rise_pct": 0.5266,
+      "duration_bars": 23
+    },
+    {
+      "symbol": "MUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 07:36:00",
+      "end_date": "2026-04-19 08:42:00",
+      "start_price": 3.5161,
+      "end_price": 3.6784,
+      "rise_pct": 0.0462,
+      "duration_bars": 22
+    },
+    {
+      "symbol": "MUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:15:00",
+      "end_date": "2026-04-19 11:15:00",
+      "start_price": 3.4386,
+      "end_price": 3.7859,
+      "rise_pct": 0.101,
+      "duration_bars": 40
+    },
+    {
+      "symbol": "MUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-21 16:00:00",
+      "end_date": "2026-04-07 08:00:00",
+      "start_price": 1.6082,
+      "end_price": 2.989,
+      "rise_pct": 0.8586,
+      "duration_bars": 50
+    },
+    {
+      "symbol": "CROSSUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:39:00",
+      "end_date": "2026-04-19 11:15:00",
+      "start_price": 0.07863,
+      "end_price": 0.0811,
+      "rise_pct": 0.0314,
+      "duration_bars": 12
+    },
+    {
+      "symbol": "CROSSUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-23 00:00:00",
+      "end_date": "2026-04-11 08:00:00",
+      "start_price": 0.05912,
+      "end_price": 0.10157,
+      "rise_pct": 0.718,
+      "duration_bars": 58
+    },
+    {
+      "symbol": "AINUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:30:00",
+      "end_date": "2026-04-19 09:00:00",
+      "start_price": 0.0644,
+      "end_price": 0.0668,
+      "rise_pct": 0.0373,
+      "duration_bars": 10
+    },
+    {
+      "symbol": "AINUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-16 08:00:00",
+      "end_date": "2026-04-12 16:00:00",
+      "start_price": 0.04651,
+      "end_price": 0.12998,
+      "rise_pct": 1.7947,
+      "duration_bars": 82
+    },
+    {
+      "symbol": "TACUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-01 16:00:00",
+      "end_date": "2026-04-13 16:00:00",
+      "start_price": 0.00334,
+      "end_price": 0.00647,
+      "rise_pct": 0.9357,
+      "duration_bars": 36
+    },
+    {
+      "symbol": "TAUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 07:33:00",
+      "end_date": "2026-04-19 10:18:00",
+      "start_price": 0.04362,
+      "end_price": 0.0477,
+      "rise_pct": 0.0935,
+      "duration_bars": 55
+    },
+    {
+      "symbol": "TAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-18 00:00:00",
+      "end_date": "2026-03-28 08:00:00",
+      "start_price": 0.03961,
+      "end_price": 0.07096,
+      "rise_pct": 0.7915,
+      "duration_bars": 31
+    },
+    {
+      "symbol": "TAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-01 00:00:00",
+      "end_date": "2026-04-02 08:00:00",
+      "start_price": 0.0326,
+      "end_price": 0.05476,
+      "rise_pct": 0.6798,
+      "duration_bars": 4
+    },
+    {
+      "symbol": "TAGUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:33:00",
+      "end_date": "2026-04-19 11:27:00",
+      "start_price": 0.0007,
+      "end_price": 0.00073,
+      "rise_pct": 0.0444,
+      "duration_bars": 38
+    },
+    {
+      "symbol": "TAGUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 00:00:00",
+      "end_date": "2026-04-03 08:00:00",
+      "start_price": 0.00053,
+      "end_price": 0.00102,
+      "rise_pct": 0.8981,
+      "duration_bars": 4
+    },
+    {
+      "symbol": "TAGUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-10 16:00:00",
+      "end_date": "2026-04-13 08:00:00",
+      "start_price": 0.00057,
+      "end_price": 0.00097,
+      "rise_pct": 0.7012,
+      "duration_bars": 8
+    },
+    {
+      "symbol": "TREEUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 16:00:00",
+      "end_date": "2026-04-06 16:00:00",
+      "start_price": 0.05485,
+      "end_price": 0.08141,
+      "rise_pct": 0.4842,
+      "duration_bars": 12
+    },
+    {
+      "symbol": "PLAYUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-20 16:00:00",
+      "end_date": "2026-04-16 00:00:00",
+      "start_price": 0.0272,
+      "end_price": 0.24512,
+      "rise_pct": 8.0118,
+      "duration_bars": 79
+    },
+    {
+      "symbol": "PLAYUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-29 00:00:00",
+      "end_date": "2026-04-07 16:00:00",
+      "start_price": 0.03084,
+      "end_price": 0.09879,
+      "rise_pct": 2.2033,
+      "duration_bars": 29
+    },
+    {
+      "symbol": "NAORISUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:24:00",
+      "end_date": "2026-04-19 11:06:00",
+      "start_price": 0.05039,
+      "end_price": 0.05347,
+      "rise_pct": 0.0611,
+      "duration_bars": 14
+    },
+    {
+      "symbol": "INUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-19 03:00:00",
+      "end_date": "2026-04-19 08:00:00",
+      "start_price": 0.0615,
+      "end_price": 0.06798,
+      "rise_pct": 0.1054,
+      "duration_bars": 20
+    },
+    {
+      "symbol": "INUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-15 08:00:00",
+      "start_price": 0.05334,
+      "end_price": 0.13339,
+      "rise_pct": 1.5007,
+      "duration_bars": 49
+    },
+    {
+      "symbol": "XNYUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:42:00",
+      "end_date": "2026-04-19 09:48:00",
+      "start_price": 0.00496,
+      "end_price": 0.00518,
+      "rise_pct": 0.0446,
+      "duration_bars": 22
+    },
+    {
+      "symbol": "XNYUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-18 16:00:00",
+      "end_date": "2026-03-27 08:00:00",
+      "start_price": 0.0038,
+      "end_price": 0.00794,
+      "rise_pct": 1.0903,
+      "duration_bars": 26
+    },
+    {
+      "symbol": "USELESSUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-14 08:00:00",
+      "end_date": "2026-03-17 08:00:00",
+      "start_price": 0.03454,
+      "end_price": 0.04737,
+      "rise_pct": 0.3715,
+      "duration_bars": 9
+    },
+    {
+      "symbol": "SAPIENUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-10 00:00:00",
+      "start_price": 0.06164,
+      "end_price": 0.08389,
+      "rise_pct": 0.361,
+      "duration_bars": 33
+    },
+    {
+      "symbol": "BASUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:45:00",
+      "end_date": "2026-04-19 09:42:00",
+      "start_price": 0.00709,
+      "end_price": 0.00749,
+      "rise_pct": 0.0563,
+      "duration_bars": 19
+    },
+    {
+      "symbol": "BASUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 14:45:00",
+      "end_date": "2026-04-18 20:00:00",
+      "start_price": 0.00692,
+      "end_price": 0.00797,
+      "rise_pct": 0.152,
+      "duration_bars": 21
+    },
+    {
+      "symbol": "BASUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 06:00:00",
+      "end_date": "2026-04-18 12:00:00",
+      "start_price": 0.00623,
+      "end_price": 0.0081,
+      "rise_pct": 0.3009,
+      "duration_bars": 78
+    },
+    {
+      "symbol": "BASUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 09:00:00",
+      "end_date": "2026-04-17 00:00:00",
+      "start_price": 0.00672,
+      "end_price": 0.00775,
+      "rise_pct": 0.1544,
+      "duration_bars": 15
+    },
+    {
+      "symbol": "BASUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 09:00:00",
+      "end_date": "2026-04-17 14:00:00",
+      "start_price": 0.00634,
+      "end_price": 0.00762,
+      "rise_pct": 0.2016,
+      "duration_bars": 5
+    },
+    {
+      "symbol": "BASUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-05 00:00:00",
+      "end_date": "2026-04-10 08:00:00",
+      "start_price": 0.00473,
+      "end_price": 0.01021,
+      "rise_pct": 1.1567,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "BTRUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:00:00",
+      "end_date": "2026-04-19 08:48:00",
+      "start_price": 0.03824,
+      "end_price": 0.04499,
+      "rise_pct": 0.1765,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "BTRUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:27:00",
+      "end_date": "2026-04-19 11:00:00",
+      "start_price": 0.03914,
+      "end_price": 0.04299,
+      "rise_pct": 0.0984,
+      "duration_bars": 31
+    },
+    {
+      "symbol": "BTRUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 11:30:00",
+      "end_date": "2026-04-19 08:45:00",
+      "start_price": 0.03205,
+      "end_price": 0.04499,
+      "rise_pct": 0.4037,
+      "duration_bars": 85
+    },
+    {
+      "symbol": "BTRUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 02:00:00",
+      "end_date": "2026-04-18 18:00:00",
+      "start_price": 0.02758,
+      "end_price": 0.03868,
+      "rise_pct": 0.4025,
+      "duration_bars": 88
+    },
+    {
+      "symbol": "BTRUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 23:00:00",
+      "end_date": "2026-04-18 00:00:00",
+      "start_price": 0.02772,
+      "end_price": 0.03495,
+      "rise_pct": 0.2608,
+      "duration_bars": 49
+    },
+    {
+      "symbol": "BTRUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-20 00:00:00",
+      "end_date": "2026-03-23 08:00:00",
+      "start_price": 0.09661,
+      "end_price": 0.20204,
+      "rise_pct": 1.0913,
+      "duration_bars": 10
+    },
+    {
+      "symbol": "MITOUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-06 00:00:00",
+      "start_price": 0.03328,
+      "end_price": 0.04493,
+      "rise_pct": 0.3501,
+      "duration_bars": 21
+    },
+    {
+      "symbol": "HEMIUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-28 08:00:00",
+      "end_date": "2026-04-02 16:00:00",
+      "start_price": 0.00538,
+      "end_price": 0.01074,
+      "rise_pct": 0.995,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "HEMIUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-09 16:00:00",
+      "end_date": "2026-04-15 00:00:00",
+      "start_price": 0.00668,
+      "end_price": 0.0099,
+      "rise_pct": 0.4829,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "QUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 23:00:00",
+      "end_date": "2026-04-19 03:00:00",
+      "start_price": 0.00879,
+      "end_price": 0.00952,
+      "rise_pct": 0.0826,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "QUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-17 08:00:00",
+      "end_date": "2026-03-28 08:00:00",
+      "start_price": 0.01154,
+      "end_price": 0.01875,
+      "rise_pct": 0.6249,
+      "duration_bars": 33
+    },
+    {
+      "symbol": "QUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-28 08:00:00",
+      "end_date": "2026-04-15 16:00:00",
+      "start_price": 0.00463,
+      "end_price": 0.01197,
+      "rise_pct": 1.5869,
+      "duration_bars": 55
+    },
+    {
+      "symbol": "QUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-07 16:00:00",
+      "end_date": "2026-04-12 00:00:00",
+      "start_price": 0.00716,
+      "end_price": 0.01157,
+      "rise_pct": 0.6156,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "TAKEUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-02 08:00:00",
+      "start_price": 0.0135,
+      "end_price": 0.01877,
+      "rise_pct": 0.3904,
+      "duration_bars": 10
+    },
+    {
+      "symbol": "PTBUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-18 16:00:00",
+      "end_date": "2026-03-28 16:00:00",
+      "start_price": 0.00098,
+      "end_price": 0.00251,
+      "rise_pct": 1.5585,
+      "duration_bars": 30
+    },
+    {
+      "symbol": "PTBUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-04 08:00:00",
+      "end_date": "2026-04-14 16:00:00",
+      "start_price": 0.0006,
+      "end_price": 0.00143,
+      "rise_pct": 1.3809,
+      "duration_bars": 31
+    },
+    {
+      "symbol": "OPENUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 22:00:00",
+      "end_date": "2026-04-18 04:00:00",
+      "start_price": 0.1967,
+      "end_price": 0.2388,
+      "rise_pct": 0.214,
+      "duration_bars": 30
+    },
+    {
+      "symbol": "OPENUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-19 16:00:00",
+      "end_date": "2026-04-08 16:00:00",
+      "start_price": 0.148,
+      "end_price": 0.2107,
+      "rise_pct": 0.4236,
+      "duration_bars": 60
+    },
+    {
+      "symbol": "HOLOUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 08:00:00",
+      "end_date": "2026-04-13 16:00:00",
+      "start_price": 0.05023,
+      "end_price": 0.07237,
+      "rise_pct": 0.4408,
+      "duration_bars": 34
+    },
+    {
+      "symbol": "UBUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 14:15:00",
+      "end_date": "2026-04-18 16:45:00",
+      "start_price": 0.03812,
+      "end_price": 0.0432,
+      "rise_pct": 0.1333,
+      "duration_bars": 10
+    },
+    {
+      "symbol": "UBUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 17:00:00",
+      "end_date": "2026-04-18 16:00:00",
+      "start_price": 0.02193,
+      "end_price": 0.0432,
+      "rise_pct": 0.9699,
+      "duration_bars": 71
+    },
+    {
+      "symbol": "0GUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-27 16:00:00",
+      "end_date": "2026-04-13 00:00:00",
+      "start_price": 0.4586,
+      "end_price": 0.6968,
+      "rise_pct": 0.5194,
+      "duration_bars": 49
+    },
+    {
+      "symbol": "TRADOORUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-21 00:00:00",
+      "end_date": "2026-04-01 00:00:00",
+      "start_price": 1.762,
+      "end_price": 3.25,
+      "rise_pct": 0.8445,
+      "duration_bars": 33
+    },
+    {
+      "symbol": "TRADOORUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-25 00:00:00",
+      "end_date": "2026-04-01 16:00:00",
+      "start_price": 1.802,
+      "end_price": 3.25,
+      "rise_pct": 0.8036,
+      "duration_bars": 23
+    },
+    {
+      "symbol": "AKEUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 14:15:00",
+      "end_date": "2026-04-18 18:15:00",
+      "start_price": 0.00047,
+      "end_price": 0.00058,
+      "rise_pct": 0.2178,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "AKEUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 20:30:00",
+      "end_date": "2026-04-19 07:45:00",
+      "start_price": 0.00042,
+      "end_price": 0.00055,
+      "rise_pct": 0.2988,
+      "duration_bars": 45
+    },
+    {
+      "symbol": "AKEUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-19 02:15:00",
+      "end_date": "2026-04-19 03:45:00",
+      "start_price": 0.00042,
+      "end_price": 0.00055,
+      "rise_pct": 0.2953,
+      "duration_bars": 6
+    },
+    {
+      "symbol": "AKEUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 00:00:00",
+      "end_date": "2026-04-16 10:00:00",
+      "start_price": 0.00056,
+      "end_price": 0.0013,
+      "rise_pct": 1.3203,
+      "duration_bars": 34
+    },
+    {
+      "symbol": "AKEUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 16:00:00",
+      "end_date": "2026-04-18 14:00:00",
+      "start_price": 0.00037,
+      "end_price": 0.00076,
+      "rise_pct": 1.0515,
+      "duration_bars": 22
+    },
+    {
+      "symbol": "AKEUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-31 00:00:00",
+      "end_date": "2026-04-05 08:00:00",
+      "start_price": 0.00018,
+      "end_price": 0.0003,
+      "rise_pct": 0.6389,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "XANUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-10 16:00:00",
+      "end_date": "2026-04-15 00:00:00",
+      "start_price": 0.00672,
+      "end_price": 0.01188,
+      "rise_pct": 0.7678,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "EDENUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 08:00:00",
+      "end_date": "2026-04-03 08:00:00",
+      "start_price": 0.02563,
+      "end_price": 0.03816,
+      "rise_pct": 0.4889,
+      "duration_bars": 12
+    },
+    {
+      "symbol": "TRUTHUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 06:51:00",
+      "end_date": "2026-04-19 09:27:00",
+      "start_price": 0.00964,
+      "end_price": 0.01028,
+      "rise_pct": 0.0662,
+      "duration_bars": 52
+    },
+    {
+      "symbol": "TRUTHUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:03:00",
+      "end_date": "2026-04-19 10:36:00",
+      "start_price": 0.00968,
+      "end_price": 0.01024,
+      "rise_pct": 0.0579,
+      "duration_bars": 51
+    },
+    {
+      "symbol": "2ZUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-06 08:00:00",
+      "start_price": 0.06609,
+      "end_price": 0.09007,
+      "rise_pct": 0.3628,
+      "duration_bars": 22
+    },
+    {
+      "symbol": "EVAAUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:39:00",
+      "end_date": "2026-04-19 10:21:00",
+      "start_price": 0.6101,
+      "end_price": 0.6356,
+      "rise_pct": 0.0418,
+      "duration_bars": 34
+    },
+    {
+      "symbol": "EVAAUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 11:06:00",
+      "end_date": "2026-04-19 11:24:00",
+      "start_price": 0.5863,
+      "end_price": 0.6256,
+      "rise_pct": 0.067,
+      "duration_bars": 6
+    },
+    {
+      "symbol": "EVAAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-27 00:00:00",
+      "end_date": "2026-04-14 08:00:00",
+      "start_price": 0.4179,
+      "end_price": 1.136,
+      "rise_pct": 1.7184,
+      "duration_bars": 55
+    },
+    {
+      "symbol": "LYNUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-18 08:00:00",
+      "end_date": "2026-03-20 08:00:00",
+      "start_price": 0.04025,
+      "end_price": 0.1488,
+      "rise_pct": 2.6969,
+      "duration_bars": 6
+    },
+    {
+      "symbol": "LYNUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 00:00:00",
+      "end_date": "2026-04-07 08:00:00",
+      "start_price": 0.04217,
+      "end_price": 0.05857,
+      "rise_pct": 0.3889,
+      "duration_bars": 16
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-04 00:00:00",
+      "end_date": "2026-04-14 16:00:00",
+      "start_price": 21.02,
+      "end_price": 56.87,
+      "rise_pct": 1.7055,
+      "duration_bars": 32
+    },
+    {
+      "symbol": "MONUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-23 08:00:00",
+      "end_date": "2026-04-10 08:00:00",
+      "start_price": 0.02038,
+      "end_price": 0.03736,
+      "rise_pct": 0.8332,
+      "duration_bars": 54
+    },
+    {
+      "symbol": "YBUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-03 08:00:00",
+      "start_price": 0.0968,
+      "end_price": 0.1513,
+      "rise_pct": 0.563,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "METUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-05 08:00:00",
+      "end_date": "2026-04-11 16:00:00",
+      "start_price": 0.1235,
+      "end_price": 0.1677,
+      "rise_pct": 0.3579,
+      "duration_bars": 19
+    },
+    {
+      "symbol": "EULUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-11 00:00:00",
+      "start_price": 0.708,
+      "end_price": 1.1976,
+      "rise_pct": 0.6915,
+      "duration_bars": 36
+    },
+    {
+      "symbol": "CLOUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-17 00:00:00",
+      "end_date": "2026-04-06 16:00:00",
+      "start_price": 0.06431,
+      "end_price": 0.11162,
+      "rise_pct": 0.7357,
+      "duration_bars": 62
+    },
+    {
+      "symbol": "CLOUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-26 16:00:00",
+      "end_date": "2026-04-02 00:00:00",
+      "start_price": 0.0665,
+      "end_price": 0.09691,
+      "rise_pct": 0.4573,
+      "duration_bars": 19
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:36:00",
+      "end_date": "2026-04-19 10:45:00",
+      "start_price": 0.10468,
+      "end_price": 0.11056,
+      "rise_pct": 0.0562,
+      "duration_bars": 43
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-27 16:00:00",
+      "end_date": "2026-04-11 16:00:00",
+      "start_price": 0.06581,
+      "end_price": 0.12146,
+      "rise_pct": 0.8456,
+      "duration_bars": 45
+    },
+    {
+      "symbol": "LABUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 13:00:00",
+      "end_date": "2026-04-18 16:15:00",
+      "start_price": 0.5817,
+      "end_price": 0.63387,
+      "rise_pct": 0.0897,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "LABUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-19 02:45:00",
+      "end_date": "2026-04-19 04:45:00",
+      "start_price": 0.46832,
+      "end_price": 0.5268,
+      "rise_pct": 0.1249,
+      "duration_bars": 8
+    },
+    {
+      "symbol": "LABUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-21 08:00:00",
+      "end_date": "2026-04-14 08:00:00",
+      "start_price": 0.18001,
+      "end_price": 0.74354,
+      "rise_pct": 3.1305,
+      "duration_bars": 72
+    },
+    {
+      "symbol": "币安人生USDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 06:39:00",
+      "end_date": "2026-04-19 07:18:00",
+      "start_price": 0.44109,
+      "end_price": 0.52595,
+      "rise_pct": 0.1924,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "币安人生USDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:06:00",
+      "end_date": "2026-04-19 09:00:00",
+      "start_price": 0.45187,
+      "end_price": 0.50638,
+      "rise_pct": 0.1206,
+      "duration_bars": 18
+    },
+    {
+      "symbol": "币安人生USDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:21:00",
+      "end_date": "2026-04-19 11:06:00",
+      "start_price": 0.41,
+      "end_price": 0.47404,
+      "rise_pct": 0.1562,
+      "duration_bars": 15
+    },
+    {
+      "symbol": "币安人生USDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 20:15:00",
+      "end_date": "2026-04-18 21:00:00",
+      "start_price": 0.46347,
+      "end_price": 0.5333,
+      "rise_pct": 0.1507,
+      "duration_bars": 3
+    },
+    {
+      "symbol": "币安人生USDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 23:15:00",
+      "end_date": "2026-04-19 07:15:00",
+      "start_price": 0.41737,
+      "end_price": 0.52595,
+      "rise_pct": 0.2602,
+      "duration_bars": 32
+    },
+    {
+      "symbol": "币安人生USDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 16:00:00",
+      "end_date": "2026-04-18 12:00:00",
+      "start_price": 0.26144,
+      "end_price": 0.60976,
+      "rise_pct": 1.3323,
+      "duration_bars": 68
+    },
+    {
+      "symbol": "币安人生USDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 10:00:00",
+      "end_date": "2026-04-16 18:00:00",
+      "start_price": 0.30566,
+      "end_price": 0.37236,
+      "rise_pct": 0.2182,
+      "duration_bars": 8
+    },
+    {
+      "symbol": "BLUAIUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 12:00:00",
+      "end_date": "2026-04-18 13:45:00",
+      "start_price": 0.009,
+      "end_price": 0.01096,
+      "rise_pct": 0.2178,
+      "duration_bars": 7
+    },
+    {
+      "symbol": "BLUAIUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 16:45:00",
+      "end_date": "2026-04-18 21:30:00",
+      "start_price": 0.009,
+      "end_price": 0.00984,
+      "rise_pct": 0.0936,
+      "duration_bars": 19
+    },
+    {
+      "symbol": "BLUAIUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 23:00:00",
+      "end_date": "2026-04-18 13:00:00",
+      "start_price": 0.0082,
+      "end_price": 0.01096,
+      "rise_pct": 0.3366,
+      "duration_bars": 38
+    },
+    {
+      "symbol": "BLUAIUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-25 00:00:00",
+      "end_date": "2026-03-27 00:00:00",
+      "start_price": 0.00563,
+      "end_price": 0.01111,
+      "rise_pct": 0.9749,
+      "duration_bars": 6
+    },
+    {
+      "symbol": "BLUAIUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 16:00:00",
+      "end_date": "2026-04-08 00:00:00",
+      "start_price": 0.0047,
+      "end_price": 0.01017,
+      "rise_pct": 1.1656,
+      "duration_bars": 25
+    },
+    {
+      "symbol": "TURTLEUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:36:00",
+      "end_date": "2026-04-19 11:24:00",
+      "start_price": 0.04636,
+      "end_price": 0.04868,
+      "rise_pct": 0.05,
+      "duration_bars": 56
+    },
+    {
+      "symbol": "TURTLEUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:30:00",
+      "end_date": "2026-04-19 10:03:00",
+      "start_price": 0.04644,
+      "end_price": 0.04808,
+      "rise_pct": 0.0353,
+      "duration_bars": 11
+    },
+    {
+      "symbol": "TURTLEUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 02:00:00",
+      "end_date": "2026-04-18 23:00:00",
+      "start_price": 0.04332,
+      "end_price": 0.05031,
+      "rise_pct": 0.1614,
+      "duration_bars": 69
+    },
+    {
+      "symbol": "TURTLEUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-02 16:00:00",
+      "start_price": 0.03813,
+      "end_price": 0.05329,
+      "rise_pct": 0.3976,
+      "duration_bars": 11
+    },
+    {
+      "symbol": "ONUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 15:15:00",
+      "end_date": "2026-04-18 20:00:00",
+      "start_price": 0.10984,
+      "end_price": 0.12418,
+      "rise_pct": 0.1306,
+      "duration_bars": 19
+    },
+    {
+      "symbol": "ONUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-19 02:45:00",
+      "end_date": "2026-04-19 05:15:00",
+      "start_price": 0.09732,
+      "end_price": 0.1073,
+      "rise_pct": 0.1025,
+      "duration_bars": 10
+    },
+    {
+      "symbol": "ONUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 01:00:00",
+      "end_date": "2026-04-15 14:00:00",
+      "start_price": 0.11155,
+      "end_price": 0.215,
+      "rise_pct": 0.9274,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "ONUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 22:00:00",
+      "end_date": "2026-04-18 11:00:00",
+      "start_price": 0.0964,
+      "end_price": 0.12958,
+      "rise_pct": 0.3442,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "ONUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-17 08:00:00",
+      "end_date": "2026-03-28 00:00:00",
+      "start_price": 0.08366,
+      "end_price": 0.25998,
+      "rise_pct": 2.1076,
+      "duration_bars": 32
+    },
+    {
+      "symbol": "ONUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-04 08:00:00",
+      "end_date": "2026-04-15 08:00:00",
+      "start_price": 0.06624,
+      "end_price": 0.215,
+      "rise_pct": 2.2458,
+      "duration_bars": 33
+    },
+    {
+      "symbol": "MMTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-05 16:00:00",
+      "start_price": 0.1024,
+      "end_price": 0.1577,
+      "rise_pct": 0.54,
+      "duration_bars": 20
+    },
+    {
+      "symbol": "TRUSTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-30 00:00:00",
+      "end_date": "2026-04-15 16:00:00",
+      "start_price": 0.05983,
+      "end_price": 0.09497,
+      "rise_pct": 0.5873,
+      "duration_bars": 50
+    },
+    {
+      "symbol": "FOLKSUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 10:06:00",
+      "end_date": "2026-04-19 10:36:00",
+      "start_price": 1.159,
+      "end_price": 1.228,
+      "rise_pct": 0.0595,
+      "duration_bars": 10
+    },
+    {
+      "symbol": "FOLKSUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-21 16:00:00",
+      "end_date": "2026-03-27 08:00:00",
+      "start_price": 0.896,
+      "end_price": 1.296,
+      "rise_pct": 0.4464,
+      "duration_bars": 17
+    },
+    {
+      "symbol": "JCTUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:24:00",
+      "end_date": "2026-04-19 11:18:00",
+      "start_price": 0.00363,
+      "end_price": 0.00384,
+      "rise_pct": 0.0576,
+      "duration_bars": 58
+    },
+    {
+      "symbol": "JCTUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 11:45:00",
+      "end_date": "2026-04-18 17:15:00",
+      "start_price": 0.00367,
+      "end_price": 0.00424,
+      "rise_pct": 0.1545,
+      "duration_bars": 22
+    },
+    {
+      "symbol": "JCTUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 22:00:00",
+      "end_date": "2026-04-19 01:15:00",
+      "start_price": 0.00356,
+      "end_price": 0.00392,
+      "rise_pct": 0.1021,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "JCTUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 19:00:00",
+      "end_date": "2026-04-17 14:00:00",
+      "start_price": 0.0033,
+      "end_price": 0.00443,
+      "rise_pct": 0.3408,
+      "duration_bars": 43
+    },
+    {
+      "symbol": "JCTUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 14:00:00",
+      "end_date": "2026-04-18 17:00:00",
+      "start_price": 0.0033,
+      "end_price": 0.00424,
+      "rise_pct": 0.2842,
+      "duration_bars": 27
+    },
+    {
+      "symbol": "JCTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-17 16:00:00",
+      "end_date": "2026-03-23 08:00:00",
+      "start_price": 0.00162,
+      "end_price": 0.00518,
+      "rise_pct": 2.2028,
+      "duration_bars": 17
+    },
+    {
+      "symbol": "JCTUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-01 16:00:00",
+      "end_date": "2026-04-05 00:00:00",
+      "start_price": 0.00194,
+      "end_price": 0.0044,
+      "rise_pct": 1.2717,
+      "duration_bars": 10
+    },
+    {
+      "symbol": "BEATUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 10:00:00",
+      "end_date": "2026-04-18 15:00:00",
+      "start_price": 0.3484,
+      "end_price": 0.5366,
+      "rise_pct": 0.5402,
+      "duration_bars": 77
+    },
+    {
+      "symbol": "BEATUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-16 00:00:00",
+      "end_date": "2026-03-23 00:00:00",
+      "start_price": 0.3862,
+      "end_price": 0.7876,
+      "rise_pct": 1.0394,
+      "duration_bars": 21
+    },
+    {
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 10:00:00",
+      "end_date": "2026-04-19 06:45:00",
+      "start_price": 0.4748,
+      "end_price": 0.7077,
+      "rise_pct": 0.4905,
+      "duration_bars": 83
+    },
+    {
+      "symbol": "PIEVERSEUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 00:00:00",
+      "end_date": "2026-04-17 10:00:00",
+      "start_price": 0.4288,
+      "end_price": 0.4983,
+      "rise_pct": 0.1621,
+      "duration_bars": 34
+    },
+    {
+      "symbol": "BOBUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-02 08:00:00",
+      "end_date": "2026-04-13 16:00:00",
+      "start_price": 0.0051,
+      "end_price": 0.00913,
+      "rise_pct": 0.7924,
+      "duration_bars": 34
+    },
+    {
+      "symbol": "IRYSUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:42:00",
+      "end_date": "2026-04-19 09:03:00",
+      "start_price": 0.02516,
+      "end_price": 0.026,
+      "rise_pct": 0.0334,
+      "duration_bars": 7
+    },
+    {
+      "symbol": "IRYSUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-19 08:00:00",
+      "end_date": "2026-04-14 08:00:00",
+      "start_price": 0.01669,
+      "end_price": 0.03914,
+      "rise_pct": 1.3451,
+      "duration_bars": 78
+    },
+    {
+      "symbol": "IRYSUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-24 08:00:00",
+      "end_date": "2026-03-30 00:00:00",
+      "start_price": 0.01679,
+      "end_price": 0.02307,
+      "rise_pct": 0.374,
+      "duration_bars": 17
+    },
+    {
+      "symbol": "CYSUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 16:00:00",
+      "end_date": "2026-04-18 16:00:00",
+      "start_price": 0.3706,
+      "end_price": 0.4916,
+      "rise_pct": 0.3265,
+      "duration_bars": 24
+    },
+    {
+      "symbol": "CYSUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-15 16:00:00",
+      "end_date": "2026-03-23 00:00:00",
+      "start_price": 0.3816,
+      "end_price": 0.7695,
+      "rise_pct": 1.0165,
+      "duration_bars": 22
+    },
+    {
+      "symbol": "GUAUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 07:06:00",
+      "end_date": "2026-04-19 10:39:00",
+      "start_price": 0.5856,
+      "end_price": 0.6978,
+      "rise_pct": 0.1916,
+      "duration_bars": 71
+    },
+    {
+      "symbol": "GUAUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 07:39:00",
+      "end_date": "2026-04-19 09:15:00",
+      "start_price": 0.589,
+      "end_price": 0.6814,
+      "rise_pct": 0.1569,
+      "duration_bars": 32
+    },
+    {
+      "symbol": "GUAUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 19:15:00",
+      "end_date": "2026-04-18 23:45:00",
+      "start_price": 0.535,
+      "end_price": 0.5991,
+      "rise_pct": 0.1198,
+      "duration_bars": 18
+    },
+    {
+      "symbol": "GUAUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 00:00:00",
+      "end_date": "2026-04-18 16:00:00",
+      "start_price": 0.5109,
+      "end_price": 0.6062,
+      "rise_pct": 0.1865,
+      "duration_bars": 40
+    },
+    {
+      "symbol": "GUAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-16 16:00:00",
+      "end_date": "2026-04-15 00:00:00",
+      "start_price": 0.26249,
+      "end_price": 0.71473,
+      "rise_pct": 1.7229,
+      "duration_bars": 88
+    },
+    {
+      "symbol": "IRUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-16 08:00:00",
+      "end_date": "2026-03-17 08:00:00",
+      "start_price": 0.03451,
+      "end_price": 0.05463,
+      "rise_pct": 0.583,
+      "duration_bars": 3
+    },
+    {
+      "symbol": "MAGMAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-21 00:00:00",
+      "end_date": "2026-03-23 00:00:00",
+      "start_price": 0.09508,
+      "end_price": 0.15461,
+      "rise_pct": 0.6261,
+      "duration_bars": 6
+    },
+    {
+      "symbol": "MAGMAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-03 00:00:00",
+      "end_date": "2026-04-10 16:00:00",
+      "start_price": 0.06937,
+      "end_price": 0.27435,
+      "rise_pct": 2.9549,
+      "duration_bars": 23
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-19 00:00:00",
+      "end_date": "2026-04-14 16:00:00",
+      "start_price": 0.0199,
+      "end_price": 0.04057,
+      "rise_pct": 1.0387,
+      "duration_bars": 80
+    },
+    {
+      "symbol": "FRAXUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 21:00:00",
+      "end_date": "2026-04-19 00:00:00",
+      "start_price": 0.4151,
+      "end_price": 0.4994,
+      "rise_pct": 0.2031,
+      "duration_bars": 75
+    },
+    {
+      "symbol": "SPORTFUNUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-23 00:00:00",
+      "end_date": "2026-04-13 08:00:00",
+      "start_price": 0.02963,
+      "end_price": 0.04166,
+      "rise_pct": 0.406,
+      "duration_bars": 64
+    },
+    {
+      "symbol": "ACUUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-08 00:00:00",
+      "end_date": "2026-04-15 00:00:00",
+      "start_price": 0.07433,
+      "end_price": 0.10105,
+      "rise_pct": 0.3595,
+      "duration_bars": 21
+    },
+    {
+      "symbol": "我踏马来了USDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-03 00:00:00",
+      "end_date": "2026-04-05 08:00:00",
+      "start_price": 0.00651,
+      "end_price": 0.00994,
+      "rise_pct": 0.5277,
+      "duration_bars": 7
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 07:06:00",
+      "end_date": "2026-04-19 08:06:00",
+      "start_price": 0.09905,
+      "end_price": 0.10399,
+      "rise_pct": 0.0499,
+      "duration_bars": 20
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:15:00",
+      "end_date": "2026-04-19 11:24:00",
+      "start_price": 0.09888,
+      "end_price": 0.1142,
+      "rise_pct": 0.1549,
+      "duration_bars": 63
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:42:00",
+      "end_date": "2026-04-19 10:27:00",
+      "start_price": 0.10026,
+      "end_price": 0.1073,
+      "rise_pct": 0.0702,
+      "duration_bars": 15
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 16:00:00",
+      "end_date": "2026-04-18 22:15:00",
+      "start_price": 0.07965,
+      "end_price": 0.11156,
+      "rise_pct": 0.4006,
+      "duration_bars": 25
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-19 00:45:00",
+      "end_date": "2026-04-19 03:30:00",
+      "start_price": 0.09219,
+      "end_price": 0.10998,
+      "rise_pct": 0.193,
+      "duration_bars": 11
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 00:00:00",
+      "end_date": "2026-04-18 22:00:00",
+      "start_price": 0.06397,
+      "end_price": 0.11156,
+      "rise_pct": 0.7439,
+      "duration_bars": 70
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 15:00:00",
+      "end_date": "2026-04-18 08:00:00",
+      "start_price": 0.06918,
+      "end_price": 0.09275,
+      "rise_pct": 0.3407,
+      "duration_bars": 17
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-16 08:00:00",
+      "end_date": "2026-03-24 16:00:00",
+      "start_price": 0.03739,
+      "end_price": 0.0528,
+      "rise_pct": 0.4123,
+      "duration_bars": 25
+    },
+    {
+      "symbol": "GWEIUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-25 00:00:00",
+      "end_date": "2026-04-12 00:00:00",
+      "start_price": 0.03701,
+      "end_price": 0.07275,
+      "rise_pct": 0.966,
+      "duration_bars": 54
+    },
+    {
+      "symbol": "MEGAUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 17:00:00",
+      "end_date": "2026-04-18 11:00:00",
+      "start_price": 0.12952,
+      "end_price": 0.22161,
+      "rise_pct": 0.711,
+      "duration_bars": 66
+    },
+    {
+      "symbol": "MEGAUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 13:00:00",
+      "end_date": "2026-04-17 22:00:00",
+      "start_price": 0.13283,
+      "end_price": 0.19274,
+      "rise_pct": 0.451,
+      "duration_bars": 9
+    },
+    {
+      "symbol": "TRIAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-17 00:00:00",
+      "end_date": "2026-03-23 08:00:00",
+      "start_price": 0.02521,
+      "end_price": 0.05174,
+      "rise_pct": 1.0524,
+      "duration_bars": 19
+    },
+    {
+      "symbol": "TRIAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-28 08:00:00",
+      "end_date": "2026-03-30 08:00:00",
+      "start_price": 0.02567,
+      "end_price": 0.03679,
+      "rise_pct": 0.4332,
+      "duration_bars": 6
+    },
+    {
+      "symbol": "TRIAUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-04-11 08:00:00",
+      "end_date": "2026-04-16 00:00:00",
+      "start_price": 0.01958,
+      "end_price": 0.03354,
+      "rise_pct": 0.713,
+      "duration_bars": 14
+    },
+    {
+      "symbol": "MSTRUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 15:00:00",
+      "end_date": "2026-04-17 22:00:00",
+      "start_price": 136.33,
+      "end_price": 173.13,
+      "rise_pct": 0.2699,
+      "duration_bars": 55
+    },
+    {
+      "symbol": "COINUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 15:00:00",
+      "end_date": "2026-04-17 22:00:00",
+      "start_price": 181.96,
+      "end_price": 216.1,
+      "rise_pct": 0.1876,
+      "duration_bars": 55
+    },
+    {
+      "symbol": "KATUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 20:45:00",
+      "end_date": "2026-04-19 09:15:00",
+      "start_price": 0.00902,
+      "end_price": 0.01,
+      "rise_pct": 0.1086,
+      "duration_bars": 50
+    },
+    {
+      "symbol": "KATUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 03:00:00",
+      "end_date": "2026-04-17 20:00:00",
+      "start_price": 0.00785,
+      "end_price": 0.00981,
+      "rise_pct": 0.2497,
+      "duration_bars": 65
+    },
+    {
+      "symbol": "KATUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-15 14:00:00",
+      "end_date": "2026-04-18 07:00:00",
+      "start_price": 0.00787,
+      "end_price": 0.00974,
+      "rise_pct": 0.2376,
+      "duration_bars": 65
+    },
+    {
+      "symbol": "KATUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 22:00:00",
+      "end_date": "2026-04-18 08:00:00",
+      "start_price": 0.00814,
+      "end_price": 0.00974,
+      "rise_pct": 0.1966,
+      "duration_bars": 34
+    },
+    {
+      "symbol": "KATUSDT",
+      "timeframe": "8h",
+      "start_date": "2026-03-20 00:00:00",
+      "end_date": "2026-03-26 16:00:00",
+      "start_price": 0.00944,
+      "end_price": 0.01842,
+      "rise_pct": 0.9513,
+      "duration_bars": 20
+    },
+    {
+      "symbol": "CFGUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-16 03:00:00",
+      "end_date": "2026-04-17 09:00:00",
+      "start_price": 0.1981,
+      "end_price": 0.245,
+      "rise_pct": 0.2367,
+      "duration_bars": 30
+    },
+    {
+      "symbol": "EDGEUSDT",
+      "timeframe": "1h",
+      "start_date": "2026-04-17 08:00:00",
+      "end_date": "2026-04-18 18:00:00",
+      "start_price": 1.1431,
+      "end_price": 1.4473,
+      "rise_pct": 0.2661,
+      "duration_bars": 34
+    },
+    {
+      "symbol": "PRLUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:00:00",
+      "end_date": "2026-04-19 11:06:00",
+      "start_price": 0.1785,
+      "end_price": 0.2009,
+      "rise_pct": 0.1255,
+      "duration_bars": 62
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 08:24:00",
+      "end_date": "2026-04-19 09:03:00",
+      "start_price": 0.03343,
+      "end_price": 0.03497,
+      "rise_pct": 0.0461,
+      "duration_bars": 13
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "timeframe": "3m",
+      "start_date": "2026-04-19 09:27:00",
+      "end_date": "2026-04-19 11:15:00",
+      "start_price": 0.03344,
+      "end_price": 0.03495,
+      "rise_pct": 0.0452,
+      "duration_bars": 36
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-18 16:45:00",
+      "end_date": "2026-04-18 21:15:00",
+      "start_price": 0.034,
+      "end_price": 0.03696,
+      "rise_pct": 0.0871,
+      "duration_bars": 18
+    },
+    {
+      "symbol": "CHIPUSDT",
+      "timeframe": "15m",
+      "start_date": "2026-04-19 01:00:00",
+      "end_date": "2026-04-19 06:00:00",
+      "start_price": 0.0302,
+      "end_price": 0.03686,
+      "rise_pct": 0.2205,
+      "duration_bars": 20
+    }
+  ]
 }
