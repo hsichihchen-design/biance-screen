@@ -7,7 +7,7 @@ import json
 # ==========================================
 # 頁面配置與極致辨識度樣式 (強制抵抗手機深色模式)
 # ==========================================
-st.set_page_config(page_title="Binance 結構看板", layout="wide")
+st.set_page_config(page_title="幣安掃圖", layout="wide")
 
 st.markdown("""
     <style>
@@ -48,9 +48,9 @@ def main():
     # 標題欄位
     col_t1, col_t2 = st.columns([3, 1])
     with col_t1: 
-        st.markdown("<h1 style='color: #000000; font-size: 2.2rem; font-weight: 900;'>₿ Binance 180K 階梯式結構</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='color: #000000; font-size: 2.2rem; font-weight: 900;'>₿ 幣安掃圖</h1>", unsafe_allow_html=True)
     with col_t2: 
-        st.markdown(f"<div style='text-align:right; color:#000000; padding-top:20px; font-weight:800;'>最後掃描<br>{last_updated}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='text-align:right; color:#000000; padding-top:20px; font-weight:800;'>最後更新<br>{last_updated}</div>", unsafe_allow_html=True)
 
     # 取得可用週期
     available_tfs = sorted(list(set([r['timeframe'] for r in all_results])))
