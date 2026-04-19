@@ -74,7 +74,7 @@ def main():
         if sym not in unique_dict or r['rise_pct'] > unique_dict[sym]['rise_pct']:
             unique_dict[sym] = r
     
-    display_results = list(unique_dict.values())
+    display_results = sorted(list(unique_dict.values()), key=lambda x: x['symbol'])
     
     inc_color, dec_color = '#E32636', '#008F39'
 
