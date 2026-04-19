@@ -103,7 +103,7 @@ def main():
             x=plot_df['t'], open=plot_df['o'], high=plot_df['h'], low=plot_df['l'], close=plot_df['c'],
             increasing_line_color=inc_color, decreasing_line_color=dec_color,
             increasing_fillcolor=inc_color, decreasing_fillcolor=dec_color,
-            increasing_line_width=0.9, decreasing_line_width=0.9
+            increasing_line_width=0.8, decreasing_line_width=0.8
         ), row=1, col=1)
 
         # 均線 (稍微加粗以提升辨識度)
