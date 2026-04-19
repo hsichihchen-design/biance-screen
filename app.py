@@ -105,9 +105,9 @@ def main():
         ), row=1, col=1)
 
         # 均線 (稍微加粗以提升辨識度)
-        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA10'], line=dict(color='#d4af37', width=1.5)), row=1, col=1)
-        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA20'], line=dict(color='#8e44ad', width=1.5)), row=1, col=1)
-        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA60'], line=dict(color='#1f77b4', width=2.0)), row=1, col=1)
+        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA10'], line=dict(color='#FF5809', width=1.2)), row=1, col=1)
+        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA20'], line=dict(color='#FF0080', width=1.2)), row=1, col=1)
+        fig.add_trace(go.Scatter(x=plot_df['t'], y=plot_df['MA60'], line=dict(color='#7E3D76', width=1.2)), row=1, col=1)
 
         # 成交量
         v_colors = [inc_color if c >= o else dec_color for c, o in zip(plot_df['c'], plot_df['o'])]
@@ -126,7 +126,7 @@ def main():
         )
         
         # 坐標軸文字全部強制為純黑、加粗
-        axis_style = dict(showgrid=False, fixedrange=True, tickfont=dict(color='#000000', size=13, family="Arial Black"))
+        axis_style = dict(showgrid=False, fixedrange=True, tickfont=dict(color='#000000', size=12, family="Arial Black"))
         
         # 套用自訂的 X 軸刻度 (只有日期)
         fig.update_xaxes(type='category', tickmode='array', tickvals=tick_vals, ticktext=tick_text, **axis_style, row=1, col=1)
