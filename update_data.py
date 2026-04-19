@@ -22,7 +22,7 @@ TF_CONFIG = {
 ANALYSIS_BARS = 180      # 統一分析最後 180 根 K 棒
 LOOKBACK_PERIOD = 10     
 MIN_DURATION = 0         
-COOLING_BARS = 30        
+COOLING_BARS = 3       
 
 session = requests.Session()
 
