@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 # gap: 最新一根最低點，必須高於第 180 根最高點的百分比
 # ==========================================
 TF_CONFIG = {
-    '3m':  {'rise': 0.03, 'interval': '3m',  'gap': 0.03}, 
+    '5m':  {'rise': 0.04, 'interval': '5m',  'gap': 0.03}, 
     '15m': {'rise': 0.07, 'interval': '15m', 'gap': 0.07}, 
     '1h':  {'rise': 0.1, 'interval': '1h',  'gap': 0.1},  
     '4h':  {'rise': 0.15, 'interval': '4h',  'gap': 0.15}   # 改 8h -> 4h, 漲幅 25%
