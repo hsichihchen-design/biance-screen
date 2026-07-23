@@ -1,6 +1,6 @@
 import json
 import time
-from datetime import datetime, timedelta
+from datetime import datetime
 from pathlib import Path
 
 import ccxt
@@ -8,70 +8,129 @@ import pandas as pd
 import requests
 
 # ==========================================
-# 60 根 K 棒專用參數
+# 60 根 K 棒：MA30 / MA45 / MA60 柔性趨勢篩選器
 # ==========================================
-# rise：一段已確認的局部低點到局部高點，至少需要上漲多少
-# gap：最近價格平台，相對於分析區前段平台至少抬高多少
-# min_duration / max_duration：一段上漲至少／最多允許持續幾根 K 棒
+# A 類：順勢延續
+#   - 價格位於 MA30 附近或上方
+#   - MA30 / MA45 / MA60 維持大致多頭排列
+#   - 允許均線之間有小幅交錯，不因「壓線」立刻淘汰
+#
+# B 類：均線壓回整理
+#   - 價格可落到 MA30 或 MA45 下方
+#   - 但仍需守在上升中的 MA60 容許帶附近
+#   - 近期必須出現回穩或重新轉強跡象
+#
+# rise：局部低點到局部高點的最低漲幅
+# gap：最近平台相對分析區前段平台至少抬高多少
+# max_pullback：從已確認高點回落到最新收盤的最大幅度
+# ma60_min_slope：MA60 相對 10 根前的最低上升幅度
+# line_tolerance_min/max：均線壓線的最小／最大容許幅度
 TF_CONFIG = {
     "5m": {
         "interval": "5m",
         "rise": 0.025,
-        "gap": 0.015,
+        "gap": 0.012,
         "min_duration": 3,
         "max_duration": 30,
+        "max_pullback": 0.10,
+        "ma60_min_slope": 0.000,
+        "line_tolerance_min": 0.003,
+        "line_tolerance_max": 0.015,
     },
     "15m": {
         "interval": "15m",
         "rise": 0.045,
-        "gap": 0.030,
+        "gap": 0.025,
         "min_duration": 3,
         "max_duration": 30,
+        "max_pullback": 0.12,
+        "ma60_min_slope": 0.001,
+        "line_tolerance_min": 0.004,
+        "line_tolerance_max": 0.018,
     },
     "1h": {
         "interval": "1h",
         "rise": 0.070,
-        "gap": 0.050,
+        "gap": 0.040,
         "min_duration": 3,
         "max_duration": 30,
+        "max_pullback": 0.15,
+        "ma60_min_slope": 0.002,
+        "line_tolerance_min": 0.006,
+        "line_tolerance_max": 0.020,
     },
     "4h": {
         "interval": "4h",
         "rise": 0.100,
-        "gap": 0.080,
+        "gap": 0.060,
         "min_duration": 3,
-        "max_duration": 30,
+        "max_duration": 35,
+        "max_pullback": 0.20,
+        "ma60_min_slope": 0.003,
+        "line_tolerance_min": 0.008,
+        "line_tolerance_max": 0.025,
+    },
+    "1d": {
+        "interval": "1d",
+        "rise": 0.200,
+        "gap": 0.080,
+        "min_duration": 5,
+        "max_duration": 40,
+        "max_pullback": 0.25,
+        "ma60_min_slope": 0.005,
+        "line_tolerance_min": 0.010,
+        "line_tolerance_max": 0.030,
     },
 }
 
 # ==========================================
-# 60 根結構判斷參數
+# 結構判斷參數
 # ==========================================
 ANALYSIS_BARS = 60
-TREND_MA = 20
-MA_SLOPE_BARS = 5
+MA_FAST = 30
+MA_MID = 45
+MA_LONG = 60
+ATR_PERIOD = 14
 
-# 前 10 根代表舊平台；最後 5 根代表現在平台
+MA30_SLOPE_BARS = 5
+MA45_SLOPE_BARS = 8
+MA60_SLOPE_BARS = 10
+
+# 使用區間分位數比較舊平台與新平台，降低單根影線干擾。
 BASE_ZONE_BARS = 10
-RECENT_ZONE_BARS = 5
+RECENT_ZONE_BARS = 10
+BASE_ZONE_QUANTILE = 0.80
+RECENT_ZONE_QUANTILE = 0.20
 
-# 左右各 4 根，共 9 根 K 棒確認一個局部轉折
+# 左右各 4 根，共 9 根確認一個局部轉折。
 PIVOT_LOOKBACK = 4
-
-# 高低點太靠近時視為同一個轉折區，只保留更極端者
 PIVOT_MERGE_DISTANCE = 2
-
-# 高點形成後至少再過 2 根 K 棒，才視為已確認
 COOLING_BARS = 2
 
-# 為 MA20 提供歷史緩衝，JSON 實際打包 80 根，畫面只顯示最後 60 根
-PACK_BARS = ANALYSIS_BARS + TREND_MA
-FETCH_LIMIT = 120
+# 均線允許約 1.5% 的柔性交錯，不要求每一刻都嚴格 MA30 > MA45 > MA60。
+MA_ALIGNMENT_TOLERANCE = 0.015
+
+# A 類：MA30 可小幅轉平或下降，但不可明顯轉弱。
+A_MA30_MAX_DECLINE = 0.010
+A_NEAR_MA60_RATIO = 0.80
+
+# B 類：MA45 可短暫走平／微降，但 MA60 必須上升。
+B_MA45_MAX_DECLINE = 0.015
+B_NEAR_MA60_RATIO = 0.65
+B_MAX_CONSECUTIVE_BELOW_MA60 = 2
+RECOVERY_LOOKBACK = 3
+
+# 容許帶採 ATR 自動調整，並受各週期 min/max 約束。
+ATR_TOLERANCE_MULTIPLIER = 0.50
+
+# 60 根顯示 + 60 根 MA60 暖機。
+PACK_BARS = ANALYSIS_BARS + MA_LONG
+FETCH_LIMIT = 180
 
 OUTPUT_FILE = Path(__file__).resolve().parent / "uptrend_results.json"
 
 session = requests.Session()
-session.headers.update({"User-Agent": "binance-screen/60-bars"})
+session.headers.update({"User-Agent": "binance-screen/ma30-ma45-ma60"})
 
 
 def get_all_binance_futures() -> list[str]:
@@ -108,7 +167,7 @@ def fetch_klines(
     limit: int = FETCH_LIMIT,
     max_retries: int = 3,
 ) -> pd.DataFrame:
-    """從幣安期貨 API 取得 K 線；遇到暫時性錯誤會重試。"""
+    """取得已收盤 K 線；遇到暫時性錯誤會重試。"""
     url = "https://fapi.binance.com/fapi/v1/klines"
     params = {"symbol": symbol, "interval": interval, "limit": limit}
 
@@ -140,11 +199,23 @@ def fetch_klines(
                 "Ignore",
             ]
             df = pd.DataFrame(payload, columns=columns)
-            numeric_columns = ["Open", "High", "Low", "Close", "Volume"]
+            numeric_columns = [
+                "Open",
+                "High",
+                "Low",
+                "Close",
+                "Volume",
+                "Close_time",
+            ]
             df[numeric_columns] = df[numeric_columns].apply(
                 pd.to_numeric, errors="coerce"
             )
             df.dropna(subset=numeric_columns, inplace=True)
+
+            # 排除尚未收盤的最後一根 K 棒。
+            now_ms = int(time.time() * 1000)
+            df = df[df["Close_time"] <= now_ms].copy()
+
             df["Open_time"] = pd.to_datetime(df["Open_time"], unit="ms", utc=True)
             df["Open_time"] = df["Open_time"].dt.tz_convert("Asia/Taipei")
             df.set_index("Open_time", inplace=True)
@@ -163,7 +234,7 @@ def merge_nearby_pivots(
     pivots: list[tuple[int, float, pd.Timestamp]],
     kind: str,
 ) -> list[tuple[int, float, pd.Timestamp]]:
-    """合併距離過近的同類轉折點，避免同一平台被重複計算。"""
+    """合併距離過近的同類轉折，只保留更極端的價格。"""
     if not pivots:
         return []
 
@@ -186,12 +257,7 @@ def find_pivots(
     list[tuple[int, float, pd.Timestamp]],
     list[tuple[int, float, pd.Timestamp]],
 ]:
-    """
-    使用左右各 4 根 K 棒確認局部高低點。
-
-    為避免平頂／平底重複入選，中心點除了必須等於區間極值，
-    還必須至少嚴格高於或低於窗口內其中一側的鄰近值。
-    """
+    """使用左右各 4 根 K 棒確認局部高點與局部低點。"""
     highs: list[tuple[int, float, pd.Timestamp]] = []
     lows: list[tuple[int, float, pd.Timestamp]] = []
 
@@ -225,38 +291,168 @@ def find_pivots(
     )
 
 
-def passes_market_structure_filter(
-    recent_df: pd.DataFrame,
-    config: dict,
-) -> tuple[bool, dict]:
-    """
-    60 根專用整體趨勢濾網。
+def calculate_atr(frame: pd.DataFrame, period: int = ATR_PERIOD) -> pd.Series:
+    """計算 ATR，作為不同標的、不同週期的動態壓線容許帶。"""
+    previous_close = frame["Close"].shift(1)
+    true_range = pd.concat(
+        [
+            frame["High"] - frame["Low"],
+            (frame["High"] - previous_close).abs(),
+            (frame["Low"] - previous_close).abs(),
+        ],
+        axis=1,
+    ).max(axis=1)
+    return true_range.rolling(period).mean()
 
-    1. 最近 5 根的最低價，要高於前 10 根最高價指定 gap。
-    2. 最新收盤價必須在 MA20 上方。
-    3. MA20 最近 5 根必須向上，避免只因短暫反彈而入選。
-    """
-    base_zone_high = float(recent_df["High"].iloc[:BASE_ZONE_BARS].max())
-    recent_zone_low = float(recent_df["Low"].iloc[-RECENT_ZONE_BARS:].min())
-    required_recent_floor = base_zone_high * (1 + config["gap"])
+
+def max_consecutive_true(values: pd.Series) -> int:
+    """回傳布林序列中最長連續 True 次數。"""
+    maximum = 0
+    current = 0
+    for value in values.fillna(False):
+        if bool(value):
+            current += 1
+            maximum = max(maximum, current)
+        else:
+            current = 0
+    return maximum
+
+
+def get_market_diagnostics(recent_df: pd.DataFrame, config: dict) -> dict:
+    """計算平台、MA30/45/60、ATR 容許帶與近期恢復訊號。"""
+    base_zone_reference = float(
+        recent_df["Close"].iloc[:BASE_ZONE_BARS].quantile(BASE_ZONE_QUANTILE)
+    )
+    recent_zone_reference = float(
+        recent_df["Close"].iloc[-RECENT_ZONE_BARS:].quantile(
+            RECENT_ZONE_QUANTILE
+        )
+    )
+    required_recent_floor = base_zone_reference * (1 + config["gap"])
 
     latest_close = float(recent_df["Close"].iloc[-1])
-    latest_ma = float(recent_df["TrendMA"].iloc[-1])
-    prior_ma = float(recent_df["TrendMA"].iloc[-1 - MA_SLOPE_BARS])
+    ma30 = float(recent_df["MA30"].iloc[-1])
+    ma45 = float(recent_df["MA45"].iloc[-1])
+    ma60 = float(recent_df["MA60"].iloc[-1])
+    atr14 = float(recent_df["ATR14"].iloc[-1])
 
-    platform_raised = recent_zone_low >= required_recent_floor
-    above_ma = latest_close >= latest_ma
-    ma_rising = latest_ma > prior_ma
+    ma30_prior = float(recent_df["MA30"].iloc[-1 - MA30_SLOPE_BARS])
+    ma45_prior = float(recent_df["MA45"].iloc[-1 - MA45_SLOPE_BARS])
+    ma60_prior = float(recent_df["MA60"].iloc[-1 - MA60_SLOPE_BARS])
 
-    diagnostics = {
-        "base_zone_high": base_zone_high,
-        "recent_zone_low": recent_zone_low,
+    ma30_slope_pct = (ma30 - ma30_prior) / ma30_prior if ma30_prior else 0.0
+    ma45_slope_pct = (ma45 - ma45_prior) / ma45_prior if ma45_prior else 0.0
+    ma60_slope_pct = (ma60 - ma60_prior) / ma60_prior if ma60_prior else 0.0
+
+    atr_tolerance_pct = (
+        ATR_TOLERANCE_MULTIPLIER * atr14 / latest_close if latest_close else 0.0
+    )
+    line_tolerance_pct = min(
+        max(atr_tolerance_pct, config["line_tolerance_min"]),
+        config["line_tolerance_max"],
+    )
+
+    ma30_floor = ma30 * (1 - line_tolerance_pct)
+    ma45_floor = ma45 * (1 - line_tolerance_pct)
+    ma60_floor = ma60 * (1 - line_tolerance_pct)
+
+    recent_ten = recent_df.iloc[-10:]
+    recent_ma60_floor = recent_ten["MA60"] * (1 - line_tolerance_pct)
+    close_near_ma60_ratio = float(
+        (recent_ten["Close"] >= recent_ma60_floor).mean()
+    )
+    below_ma60_band = recent_ten["Close"] < recent_ma60_floor
+    max_consecutive_below_ma60 = max_consecutive_true(below_ma60_band)
+
+    previous_closes = recent_df["Close"].iloc[-1 - RECOVERY_LOOKBACK : -1]
+    last_three_closes = recent_df["Close"].iloc[-3:]
+    sequential_recovery = bool(
+        len(last_three_closes) == 3
+        and last_three_closes.iloc[-1]
+        > last_three_closes.iloc[-2]
+        > last_three_closes.iloc[-3]
+    )
+    recovery_signal = bool(
+        latest_close >= float(previous_closes.max())
+        or latest_close >= ma30_floor
+        or sequential_recovery
+    )
+
+    soft_ma30_above_ma45 = ma30 >= ma45 * (1 - MA_ALIGNMENT_TOLERANCE)
+    soft_ma45_above_ma60 = ma45 >= ma60 * (1 - MA_ALIGNMENT_TOLERANCE)
+
+    return {
+        "base_zone_reference": base_zone_reference,
+        "recent_zone_reference": recent_zone_reference,
         "required_recent_floor": required_recent_floor,
+        "platform_raised": recent_zone_reference >= required_recent_floor,
         "latest_close": latest_close,
-        "latest_ma": latest_ma,
-        "ma_slope_pct": (latest_ma - prior_ma) / prior_ma if prior_ma else 0.0,
+        "ma30": ma30,
+        "ma45": ma45,
+        "ma60": ma60,
+        "atr14": atr14,
+        "line_tolerance_pct": line_tolerance_pct,
+        "ma30_floor": ma30_floor,
+        "ma45_floor": ma45_floor,
+        "ma60_floor": ma60_floor,
+        "ma30_slope_pct": ma30_slope_pct,
+        "ma45_slope_pct": ma45_slope_pct,
+        "ma60_slope_pct": ma60_slope_pct,
+        "ma60_rising": ma60_slope_pct >= config["ma60_min_slope"],
+        "soft_ma30_above_ma45": soft_ma30_above_ma45,
+        "soft_ma45_above_ma60": soft_ma45_above_ma60,
+        "close_near_ma60_ratio": close_near_ma60_ratio,
+        "max_consecutive_below_ma60": max_consecutive_below_ma60,
+        "recovery_signal": recovery_signal,
     }
-    return platform_raised and above_ma and ma_rising, diagnostics
+
+
+def classify_signal(
+    high_price: float,
+    diagnostics: dict,
+    config: dict,
+) -> tuple[str | None, str | None, dict]:
+    """依價格相對 MA30/45/60 的位置分成 A 或 B。"""
+    latest_close = diagnostics["latest_close"]
+    ma30_slope_pct = diagnostics["ma30_slope_pct"]
+    ma45_slope_pct = diagnostics["ma45_slope_pct"]
+    close_near_ma60_ratio = diagnostics["close_near_ma60_ratio"]
+
+    pullback_pct = max(0.0, (high_price - latest_close) / high_price)
+
+    # A：價格在 MA30 容許帶附近或上方，均線大致維持多頭排列。
+    continuation_structure = bool(
+        latest_close >= diagnostics["ma30_floor"]
+        and diagnostics["soft_ma30_above_ma45"]
+        and diagnostics["soft_ma45_above_ma60"]
+        and ma30_slope_pct >= -A_MA30_MAX_DECLINE
+        and close_near_ma60_ratio >= A_NEAR_MA60_RATIO
+        and pullback_pct <= config["max_pullback"]
+    )
+
+    # B：價格可以壓到 MA45、甚至稍微壓到 MA60，但不可長時間失守。
+    pullback_structure = bool(
+        latest_close >= diagnostics["ma60_floor"]
+        and diagnostics["soft_ma45_above_ma60"]
+        and ma45_slope_pct >= -B_MA45_MAX_DECLINE
+        and close_near_ma60_ratio >= B_NEAR_MA60_RATIO
+        and diagnostics["max_consecutive_below_ma60"]
+        <= B_MAX_CONSECUTIVE_BELOW_MA60
+        and diagnostics["recovery_signal"]
+        and pullback_pct <= config["max_pullback"]
+    )
+
+    extra = {
+        "pullback_pct": pullback_pct,
+        "continuation_structure": continuation_structure,
+        "pullback_structure": pullback_structure,
+    }
+
+    if continuation_structure:
+        return "A", "順勢延續", extra
+    if pullback_structure:
+        return "B", "均線壓回", extra
+    return None, None, extra
 
 
 def identify_uptrend_logic(
@@ -265,17 +461,25 @@ def identify_uptrend_logic(
     tf_key: str,
     config: dict,
 ) -> list[dict]:
-    """辨識最後 60 根內已確認完成的上漲波段。"""
-    required_rows = ANALYSIS_BARS + TREND_MA
+    """辨識最後 60 根內的主升段，再依 MA30/45/60 分類目前狀態。"""
+    required_rows = ANALYSIS_BARS + MA_LONG
     if len(df) < required_rows:
         return []
 
     working_df = df.copy()
-    working_df["TrendMA"] = working_df["Close"].rolling(TREND_MA).mean()
+    working_df["MA30"] = working_df["Close"].rolling(MA_FAST).mean()
+    working_df["MA45"] = working_df["Close"].rolling(MA_MID).mean()
+    working_df["MA60"] = working_df["Close"].rolling(MA_LONG).mean()
+    working_df["ATR14"] = calculate_atr(working_df, ATR_PERIOD)
     recent_df = working_df.iloc[-ANALYSIS_BARS:].copy()
 
-    passed, diagnostics = passes_market_structure_filter(recent_df, config)
-    if not passed:
+    if recent_df[["MA30", "MA45", "MA60", "ATR14"]].isna().any().any():
+        return []
+
+    diagnostics = get_market_diagnostics(recent_df, config)
+
+    # 兩種型態都必須先符合：價格平台已抬高、MA60 仍上升。
+    if not diagnostics["platform_raised"] or not diagnostics["ma60_rising"]:
         return []
 
     highs, lows = find_pivots(recent_df)
@@ -288,7 +492,9 @@ def identify_uptrend_logic(
             for high in highs
             if high[0] > low_index
             and high[0] not in used_high_indices
-            and config["min_duration"] <= high[0] - low_index <= config["max_duration"]
+            and config["min_duration"]
+            <= high[0] - low_index
+            <= config["max_duration"]
         ]
         if not candidates:
             continue
@@ -301,7 +507,7 @@ def identify_uptrend_logic(
             if rise_pct < config["rise"]:
                 continue
 
-            # 低點形成後到高點之前，不得再次跌破起始低點。
+            # 低點形成後到高點以前，不得再次跌破起始低點。
             middle_lows = recent_df["Low"].iloc[low_index + 1 : high_index]
             if not middle_lows.empty and float(middle_lows.min()) <= low_price:
                 continue
@@ -318,11 +524,21 @@ def identify_uptrend_logic(
         if bars_after_high < COOLING_BARS:
             continue
 
+        signal_type, signal_name, classification = classify_signal(
+            high_price=high_price,
+            diagnostics=diagnostics,
+            config=config,
+        )
+        if signal_type is None:
+            continue
+
         used_high_indices.add(high_index)
         segments.append(
             {
                 "symbol": symbol,
                 "timeframe": tf_key,
+                "signal_type": signal_type,
+                "signal_name": signal_name,
                 "start_date": low_time.strftime("%Y-%m-%d %H:%M:%S"),
                 "end_date": high_time.strftime("%Y-%m-%d %H:%M:%S"),
                 "start_label": low_time.strftime("%m-%d %H:%M"),
@@ -334,10 +550,46 @@ def identify_uptrend_logic(
                 "bars_after_high": bars_after_high,
                 "structure": {
                     "analysis_bars": ANALYSIS_BARS,
-                    "trend_ma": TREND_MA,
-                    "base_zone_high": round(diagnostics["base_zone_high"], 12),
-                    "recent_zone_low": round(diagnostics["recent_zone_low"], 12),
-                    "ma_slope_pct": round(diagnostics["ma_slope_pct"], 6),
+                    "ma_fast": MA_FAST,
+                    "ma_mid": MA_MID,
+                    "ma_long": MA_LONG,
+                    "base_zone_reference": round(
+                        diagnostics["base_zone_reference"], 12
+                    ),
+                    "recent_zone_reference": round(
+                        diagnostics["recent_zone_reference"], 12
+                    ),
+                    "latest_close": round(diagnostics["latest_close"], 12),
+                    "ma30": round(diagnostics["ma30"], 12),
+                    "ma45": round(diagnostics["ma45"], 12),
+                    "ma60": round(diagnostics["ma60"], 12),
+                    "atr14": round(diagnostics["atr14"], 12),
+                    "line_tolerance_pct": round(
+                        diagnostics["line_tolerance_pct"], 6
+                    ),
+                    "ma30_slope_pct": round(
+                        diagnostics["ma30_slope_pct"], 6
+                    ),
+                    "ma45_slope_pct": round(
+                        diagnostics["ma45_slope_pct"], 6
+                    ),
+                    "ma60_slope_pct": round(
+                        diagnostics["ma60_slope_pct"], 6
+                    ),
+                    "soft_ma30_above_ma45": diagnostics[
+                        "soft_ma30_above_ma45"
+                    ],
+                    "soft_ma45_above_ma60": diagnostics[
+                        "soft_ma45_above_ma60"
+                    ],
+                    "close_near_ma60_ratio": round(
+                        diagnostics["close_near_ma60_ratio"], 4
+                    ),
+                    "max_consecutive_below_ma60": diagnostics[
+                        "max_consecutive_below_ma60"
+                    ],
+                    "recovery_signal": diagnostics["recovery_signal"],
+                    "pullback_pct": round(classification["pullback_pct"], 4),
                 },
                 "kline_data": [],
             }
@@ -347,7 +599,7 @@ def identify_uptrend_logic(
 
 
 def package_kline_data(df: pd.DataFrame) -> list[dict]:
-    """打包最近 80 根，讓前 20 根只負責均線暖機，畫面顯示最後 60 根。"""
+    """打包最近 120 根；前 60 根負責 MA60 暖機。"""
     package_df = df.iloc[-PACK_BARS:].copy()
     return [
         {
@@ -392,11 +644,16 @@ def main() -> None:
 
             time.sleep(0.05)
 
+    type_a_count = sum(1 for item in all_results if item["signal_type"] == "A")
+    type_b_count = sum(1 for item in all_results if item["signal_type"] == "B")
+
     output = {
         "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "settings": {
             "analysis_bars": ANALYSIS_BARS,
-            "trend_ma": TREND_MA,
+            "ma_fast": MA_FAST,
+            "ma_mid": MA_MID,
+            "ma_long": MA_LONG,
             "pivot_lookback": PIVOT_LOOKBACK,
             "cooling_bars": COOLING_BARS,
             "base_zone_bars": BASE_ZONE_BARS,
@@ -406,6 +663,8 @@ def main() -> None:
         "summary": {
             "symbols_scanned": len(symbols),
             "signals_found": len(all_results),
+            "type_a_signals": type_a_count,
+            "type_b_signals": type_b_count,
             "failed_requests": failed_requests,
         },
         "results": all_results,
@@ -415,7 +674,8 @@ def main() -> None:
         json.dump(output, file, ensure_ascii=False, indent=2)
 
     print(
-        f"\n✅ 分析完成：找到 {len(all_results)} 組訊號，"
+        f"\n✅ 分析完成：共 {len(all_results)} 組訊號 "
+        f"（A {type_a_count}／B {type_b_count}），"
         f"失敗請求 {failed_requests} 次。"
     )
     print(f"輸出位置：{OUTPUT_FILE}")

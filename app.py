@@ -10,7 +10,7 @@ APP_DIR = Path(__file__).resolve().parent
 DATA_FILE = APP_DIR / "uptrend_results.json"
 DEFAULT_ANALYSIS_BARS = 60
 
-st.set_page_config(page_title="幣安掃圖｜60 根", layout="wide")
+st.set_page_config(page_title="幣安掃圖｜MA30/45/60", layout="wide")
 
 st.markdown(
     """
@@ -23,7 +23,7 @@ st.markdown(
         font-family: "Arial", sans-serif !important;
     }
     .stRadio p {
-        font-size: 1.1rem !important;
+        font-size: 1.05rem !important;
         font-weight: 700 !important;
     }
     [data-testid="stSidebar"] { display: none; }
@@ -46,16 +46,23 @@ def load_data() -> dict:
 
 
 def timeframe_sort_key(timeframe: str) -> int:
-    order = {"5m": 1, "15m": 2, "1h": 3, "4h": 4}
+    order = {"5m": 1, "15m": 2, "1h": 3, "4h": 4, "1d": 5}
     return order.get(timeframe, 999)
 
 
 def choose_one_signal_per_symbol(results: list[dict]) -> list[dict]:
-    """同週期、同幣種若有多段訊號，只保留漲幅最大的那一段。"""
+    """同幣種保留最近完成的波段；若同時完成則保留漲幅較大者。"""
     selected: dict[str, dict] = {}
     for result in results:
         symbol = result["symbol"]
-        if symbol not in selected or result["rise_pct"] > selected[symbol]["rise_pct"]:
+        current_key = (result.get("end_date", ""), result.get("rise_pct", 0))
+        previous = selected.get(symbol)
+        previous_key = (
+            (previous.get("end_date", ""), previous.get("rise_pct", 0))
+            if previous
+            else ("", -1)
+        )
+        if previous is None or current_key > previous_key:
             selected[symbol] = result
     return sorted(selected.values(), key=lambda item: item["symbol"])
 
@@ -68,10 +75,9 @@ def build_chart(result: dict, analysis_bars: int) -> go.Figure:
     if frame.empty:
         return go.Figure()
 
-    # 60 根版本使用 MA10 / MA15 / MA20。
-    frame["MA10"] = frame["c"].rolling(10).mean()
-    frame["MA15"] = frame["c"].rolling(15).mean()
-    frame["MA20"] = frame["c"].rolling(20).mean()
+    frame["MA30"] = frame["c"].rolling(30).mean()
+    frame["MA45"] = frame["c"].rolling(45).mean()
+    frame["MA60"] = frame["c"].rolling(60).mean()
     plot_df = frame.tail(analysis_bars).copy()
 
     all_times = plot_df["t"].tolist()
@@ -112,9 +118,9 @@ def build_chart(result: dict, analysis_bars: int) -> go.Figure:
     figure.add_trace(
         go.Scatter(
             x=plot_df["t"],
-            y=plot_df["MA10"],
-            line={"color": "#F75000", "width": 1.2},
-            name="MA10",
+            y=plot_df["MA30"],
+            line={"color": "#F28E2B", "width": 1.4},
+            name="MA30",
         ),
         row=1,
         col=1,
@@ -122,9 +128,9 @@ def build_chart(result: dict, analysis_bars: int) -> go.Figure:
     figure.add_trace(
         go.Scatter(
             x=plot_df["t"],
-            y=plot_df["MA15"],
-            line={"color": "#9F0050", "width": 1.2},
-            name="MA15",
+            y=plot_df["MA45"],
+            line={"color": "#4E79A7", "width": 1.4},
+            name="MA45",
         ),
         row=1,
         col=1,
@@ -132,9 +138,9 @@ def build_chart(result: dict, analysis_bars: int) -> go.Figure:
     figure.add_trace(
         go.Scatter(
             x=plot_df["t"],
-            y=plot_df["MA20"],
-            line={"color": "#6C3365", "width": 1.3},
-            name="MA20",
+            y=plot_df["MA60"],
+            line={"color": "#9C6ADE", "width": 1.6},
+            name="MA60",
         ),
         row=1,
         col=1,
@@ -155,7 +161,6 @@ def build_chart(result: dict, analysis_bars: int) -> go.Figure:
         col=1,
     )
 
-    # 把程式實際判斷的低點、高點畫出來，不再只顯示未標記的 K 線。
     start_label = result.get("start_label")
     end_label = result.get("end_label")
     if start_label in all_times:
@@ -187,11 +192,19 @@ def build_chart(result: dict, analysis_bars: int) -> go.Figure:
             col=1,
         )
 
-    rise_percent = result["rise_pct"] * 100
+    rise_percent = result.get("rise_pct", 0) * 100
+    pullback_percent = result.get("structure", {}).get("pullback_pct", 0) * 100
+    tolerance_percent = (
+        result.get("structure", {}).get("line_tolerance_pct", 0) * 100
+    )
     duration = result.get("duration_bars", "-")
+    signal_type = result.get("signal_type", "?")
+    signal_name = result.get("signal_name", "未分類")
+    type_color = "#0057B8" if signal_type == "A" else "#B35C00"
+
     figure.update_layout(
-        height=430,
-        margin={"l": 5, "r": 55, "t": 62, "b": 20},
+        height=460,
+        margin={"l": 5, "r": 55, "t": 72, "b": 20},
         xaxis_rangeslider_visible=False,
         template="plotly_white",
         paper_bgcolor="white",
@@ -199,9 +212,14 @@ def build_chart(result: dict, analysis_bars: int) -> go.Figure:
         title={
             "text": (
                 f"<b>{symbol} ({timeframe})</b> "
-                f"<span style='font-size:14px'>+{rise_percent:.1f}%｜{duration} 根</span>"
+                f"<span style='color:{type_color};font-size:14px'>"
+                f"{signal_type}｜{signal_name}</span><br>"
+                f"<span style='font-size:13px'>"
+                f"主升 +{rise_percent:.1f}%｜回檔 {pullback_percent:.1f}%｜"
+                f"容許帶 ±{tolerance_percent:.1f}%｜{duration} 根"
+                f"</span>"
             ),
-            "font": {"size": 21, "color": "#000000"},
+            "font": {"size": 20, "color": "#000000"},
             "x": 0.01,
         },
         showlegend=False,
@@ -243,6 +261,30 @@ def build_chart(result: dict, analysis_bars: int) -> go.Figure:
     return figure
 
 
+def structure_caption(result: dict) -> str:
+    structure = result.get("structure", {})
+    ma30 = structure.get("ma30")
+    ma45 = structure.get("ma45")
+    ma60 = structure.get("ma60")
+    ma60_slope = structure.get("ma60_slope_pct")
+    tolerance = structure.get("line_tolerance_pct")
+    near_ratio = structure.get("close_near_ma60_ratio")
+    below_count = structure.get("max_consecutive_below_ma60")
+
+    def fmt_price(value):
+        if value is None:
+            return "-"
+        return f"{value:,.6g}"
+
+    return (
+        f"MA30 {fmt_price(ma30)}｜MA45 {fmt_price(ma45)}｜MA60 {fmt_price(ma60)}｜"
+        f"MA60斜率 {(ma60_slope or 0) * 100:.2f}%｜"
+        f"壓線容許 {(tolerance or 0) * 100:.1f}%｜"
+        f"近10根守住MA60帶 {(near_ratio or 0) * 100:.0f}%｜"
+        f"最長失守 {below_count or 0} 根"
+    )
+
+
 def main() -> None:
     data_store = load_data()
     if not data_store:
@@ -259,8 +301,8 @@ def main() -> None:
         <div style='display:flex; justify-content:space-between; align-items:baseline;
                     border-bottom:2px solid #000000; padding-top:25px;
                     padding-bottom:5px; margin-bottom:10px;'>
-            <div style='font-size:2.2rem; font-weight:900; line-height:1.2;'>
-                ₿ 幣安掃圖｜{analysis_bars} 根
+            <div style='font-size:2.1rem; font-weight:900; line-height:1.2;'>
+                ₿ 幣安掃圖｜MA30 / MA45 / MA60
             </div>
             <div style='font-size:0.9rem; font-weight:800;'>更新：{last_updated}</div>
         </div>
@@ -270,7 +312,8 @@ def main() -> None:
 
     st.caption(
         f"掃描 {summary.get('symbols_scanned', '-')} 個標的｜"
-        f"訊號 {summary.get('signals_found', len(all_results))} 組｜"
+        f"A 順勢延續 {summary.get('type_a_signals', '-')} 組｜"
+        f"B 均線壓回 {summary.get('type_b_signals', '-')} 組｜"
         f"失敗請求 {summary.get('failed_requests', '-')} 次"
     )
 
@@ -279,7 +322,7 @@ def main() -> None:
         key=timeframe_sort_key,
     )
     if not available_timeframes:
-        st.info("目前沒有符合 60 根上漲結構的標的。")
+        st.info("目前沒有符合 MA30/45/60 柔性趨勢結構的標的。")
         return
 
     selected_timeframe = st.radio(
@@ -287,15 +330,29 @@ def main() -> None:
         available_timeframes,
         horizontal=True,
     )
+
+    type_options = {
+        "全部": None,
+        "A｜順勢延續": "A",
+        "B｜均線壓回": "B",
+    }
+    selected_type_label = st.radio(
+        "型態",
+        list(type_options.keys()),
+        horizontal=True,
+    )
+    selected_type = type_options[selected_type_label]
+
     st.markdown("<hr style='border:1px solid #cccccc;'>", unsafe_allow_html=True)
 
     timeframe_results = [
         result
         for result in all_results
         if result["timeframe"] == selected_timeframe
+        and (selected_type is None or result.get("signal_type") == selected_type)
     ]
     display_results = choose_one_signal_per_symbol(timeframe_results)
-    st.caption(f"目前顯示 {len(display_results)} 個幣種；同幣種只保留漲幅最大波段。")
+    st.caption(f"目前顯示 {len(display_results)} 個幣種；同幣種保留最近完成的波段。")
 
     layout_columns = None
     for index, result in enumerate(display_results):
@@ -310,6 +367,7 @@ def main() -> None:
                 theme=None,
                 config={"staticPlot": True, "displayModeBar": False},
             )
+            st.caption(structure_caption(result))
             st.markdown("<div style='height:20px;'></div>", unsafe_allow_html=True)
 
 
